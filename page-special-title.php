@@ -1,0 +1,36 @@
+<?php
+/**
+ * Template Name: Special Title
+ *
+ * @link https://codex.wordpress.org/Template_Hierarchy
+ *
+ * @package ACStarter
+ */
+
+get_header(); ?>
+
+	<div id="primary" class="content-area-full">
+		<main id="main" class="site-main" role="main">
+			
+				<?php
+				while ( have_posts() ) : the_post(); 
+
+					get_template_part('inc/special-title');
+					get_template_part('inc/banner');
+
+					$regLink = get_field('registration_link', 'option');
+				?>
+					<div class="wrapper pagecontent">
+						<div class="entry-content">
+							<?php the_content(); ?>
+						</div>
+					</div>
+				<?php endwhile; // End of the loop.
+				?>
+			
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+<?php
+// get_sidebar();
+get_footer();
