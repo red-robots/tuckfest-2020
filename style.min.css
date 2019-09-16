@@ -1913,8 +1913,6 @@ html[xmlns] .flexslider .slides{display:block}
 }.widget{margin:0 0 1.5em}
 .widget select{max-width:100%}
 body{font-family:"Helvetica",sans-serif;background-size:100%;background-color:#faf0d0}
-body.logged-in{margin-top:32px}
-body.logged-in #page{margin-top:32px}
 body.logged-in #masthead{top:32px}
 .clear{clear:both}
 .wrapper{width:100%;margin:0 auto;clear:both}

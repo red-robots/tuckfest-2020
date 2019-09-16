@@ -26,7 +26,7 @@ wp_reset_postdata();
 // $obj = get_queried_object();
 $post_id = $GLOBALS['pageID'];
 $postType = get_post_type($post_id);
-$hpID = get_the_ID();
+// $hpID = get_the_ID();
 echo '<pre>';
 print_r($post_id);
 echo '</pre>';

@@ -107,7 +107,7 @@
 </ul>
 <ul class="submenu music">
 	<li>
-		<a href="<?php bloginfo('url'); ?>/2020-artists">2020 Artists</a>
+		<a href="<?php bloginfo('url'); ?>/tuckfest-music/2020-artists">2020 Artists</a>
 	</li>
 	<li>
 		<a href="<?php bloginfo('url'); ?>/tuckfest-music/line-up-poster/">Line Up Poster</a>
