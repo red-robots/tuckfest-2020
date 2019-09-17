@@ -11,6 +11,8 @@ get_header();
 
 get_template_part('inc/coming-soon');
 
+$comingSoon = get_field('coming_soon');
+if($comingSoon[0] !== 'soon') :
 ?>
 
 	<div id="primary" class="content-area-full">
@@ -72,5 +74,6 @@ get_template_part('inc/coming-soon');
 	</div><!-- #primary -->
 
 <?php
+endif;
 // get_sidebar();
 get_footer();

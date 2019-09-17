@@ -7,7 +7,11 @@
  * @package ACStarter
  */
 
-get_header(); ?>
+get_header(); 
+get_template_part('inc/coming-soon');
+$comingSoon = get_field('coming_soon');
+if($comingSoon[0] !== 'soon') :
+?>
 
 	<div id="primary" class="content-area-full">
 		<main id="main" class="site-main" role="main">
@@ -69,5 +73,6 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php
+endif;
 // get_sidebar();
 get_footer();

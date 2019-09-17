@@ -364,6 +364,12 @@ header.blue {
 			float: left;
 			height: 90vh;
 		}
+		h2 {
+			span.tan {color: $color-tan;}
+			span.blue {color: $color-blue;}
+			span.orange {color: $color-orange;}
+			span.dark-orange {color: $color-dark-orange;}
+		}
 	}
 	.lefty {
 		background-color: $color-blue;
@@ -379,7 +385,7 @@ header.blue {
 	}
 }
 header.special-title,
-.left
+.left, .lefty
 {
 	width: 100%;
 	float: left;

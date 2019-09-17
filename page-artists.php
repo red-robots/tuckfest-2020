@@ -13,7 +13,6 @@ get_template_part('inc/coming-soon');
 get_template_part('inc/banner');
 
 $comingSoon = get_field('coming_soon');
-
 if($comingSoon[0] !== 'soon') :
 
 ?>

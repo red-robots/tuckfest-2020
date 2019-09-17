@@ -1973,25 +1973,29 @@ header.blue h1:before{width:800px;position:absolute;left:-800px;top:0;height:100
 }@media screen and (min-width:1200px){header.blue h1{padding:40px 40px 40px 0}
 }.coming-soon .lefty,.coming-soon .righty{width:100%;background-color:#f4a74e;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;position:relative;z-index:10}
 @media screen and (min-width:750px){.coming-soon .lefty,.coming-soon .righty{width:50%;float:left;height:90vh}
-}.coming-soon .lefty{background-color:#092745}
+}.coming-soon .lefty h2 span.tan,.coming-soon .righty h2 span.tan{color:#faf0d0}
+.coming-soon .lefty h2 span.blue,.coming-soon .righty h2 span.blue{color:#092745}
+.coming-soon .lefty h2 span.orange,.coming-soon .righty h2 span.orange{color:#f4a74e}
+.coming-soon .lefty h2 span.dark-orange,.coming-soon .righty h2 span.dark-orange{color:#ec663c}
+.coming-soon .lefty{background-color:#092745}
 .coming-soon .righty .img{width:40%}
 .coming-soon .righty .img img{width:100%}
-header.special-title,.left{width:100%;float:left;position:relative;background-color:#092745;padding:50px 0}
-header.special-title h1,header.special-title h2,.left h1,.left h2{line-height:1.2;font-size:32px;font-family:"CoCo",sans-serif}
-@media screen and (min-width:750px){header.special-title h1,header.special-title h2,.left h1,.left h2{font-size:42px}
-}@media screen and (min-width:1200px){header.special-title h1,header.special-title h2,.left h1,.left h2{font-size:50px}
-}header.special-title h1 span,header.special-title h2 span,.left h1 span,.left h2 span{width:100%;float:left;padding:0 0 0 20px}
-@media screen and (min-width:1200px){header.special-title h1 span,header.special-title h2 span,.left h1 span,.left h2 span{padding:0}
-}header.special-title h1 span.tan,header.special-title h2 span.tan,.left h1 span.tan,.left h2 span.tan{color:#faf0d0}
-header.special-title h1 span.orange,header.special-title h2 span.orange,.left h1 span.orange,.left h2 span.orange{color:#f4a74e}
-header.special-title h1 span.dark-orange,header.special-title h2 span.dark-orange,.left h1 span.dark-orange,.left h2 span.dark-orange{color:#ec663c}
-header.special-title h1 span.center,header.special-title h2 span.center,.left h1 span.center,.left h2 span.center{text-align:center}
-header.special-title h1 span.small,header.special-title h2 span.small,.left h1 span.small,.left h2 span.small{font-size:26px}
-@media screen and (min-width:750px){header.special-title h1 span.small,header.special-title h2 span.small,.left h1 span.small,.left h2 span.small{font-size:32px}
-}@media screen and (min-width:1200px){header.special-title h1 span.small,header.special-title h2 span.small,.left h1 span.small,.left h2 span.small{font-size:36px}
-}header.special-title h2,.left h2{width:auto;margin-left:20%}
-header.special-title .waves,.left .waves{width:50px;position:absolute;right:5%;top:50%;z-index:100000}
-header.special-title .dots,.left .dots{width:50px;position:absolute;left:5%;top:15%;z-index:100000}
+header.special-title,.left,.lefty{width:100%;float:left;position:relative;background-color:#092745;padding:50px 0}
+header.special-title h1,header.special-title h2,.left h1,.left h2,.lefty h1,.lefty h2{line-height:1.2;font-size:32px;font-family:"CoCo",sans-serif}
+@media screen and (min-width:750px){header.special-title h1,header.special-title h2,.left h1,.left h2,.lefty h1,.lefty h2{font-size:42px}
+}@media screen and (min-width:1200px){header.special-title h1,header.special-title h2,.left h1,.left h2,.lefty h1,.lefty h2{font-size:50px}
+}header.special-title h1 span,header.special-title h2 span,.left h1 span,.left h2 span,.lefty h1 span,.lefty h2 span{width:100%;float:left;padding:0 0 0 20px}
+@media screen and (min-width:1200px){header.special-title h1 span,header.special-title h2 span,.left h1 span,.left h2 span,.lefty h1 span,.lefty h2 span{padding:0}
+}header.special-title h1 span.tan,header.special-title h2 span.tan,.left h1 span.tan,.left h2 span.tan,.lefty h1 span.tan,.lefty h2 span.tan{color:#faf0d0}
+header.special-title h1 span.orange,header.special-title h2 span.orange,.left h1 span.orange,.left h2 span.orange,.lefty h1 span.orange,.lefty h2 span.orange{color:#f4a74e}
+header.special-title h1 span.dark-orange,header.special-title h2 span.dark-orange,.left h1 span.dark-orange,.left h2 span.dark-orange,.lefty h1 span.dark-orange,.lefty h2 span.dark-orange{color:#ec663c}
+header.special-title h1 span.center,header.special-title h2 span.center,.left h1 span.center,.left h2 span.center,.lefty h1 span.center,.lefty h2 span.center{text-align:center}
+header.special-title h1 span.small,header.special-title h2 span.small,.left h1 span.small,.left h2 span.small,.lefty h1 span.small,.lefty h2 span.small{font-size:26px}
+@media screen and (min-width:750px){header.special-title h1 span.small,header.special-title h2 span.small,.left h1 span.small,.left h2 span.small,.lefty h1 span.small,.lefty h2 span.small{font-size:32px}
+}@media screen and (min-width:1200px){header.special-title h1 span.small,header.special-title h2 span.small,.left h1 span.small,.left h2 span.small,.lefty h1 span.small,.lefty h2 span.small{font-size:36px}
+}header.special-title h2,.left h2,.lefty h2{width:auto;margin-left:20%}
+header.special-title .waves,.left .waves,.lefty .waves{width:50px;position:absolute;right:5%;top:50%;z-index:100000}
+header.special-title .dots,.left .dots,.lefty .dots{width:50px;position:absolute;left:5%;top:15%;z-index:100000}
 .mobile-header-scroll{width:65%;margin:0 auto 20px auto;background-color:white;padding:2%;overflow:hidden;-webkit-transition:all ease .4s;transition:all ease .4s;position:relative;z-index:100001}
 @media screen and (min-width:750px){.mobile-header-scroll{display:none}
 }.mobile-header-scroll.scrolled{height:0;padding:0}
