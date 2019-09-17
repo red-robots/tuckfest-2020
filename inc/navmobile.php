@@ -14,17 +14,11 @@
     			<a href="<?php bloginfo('url'); ?>/tuckfest-music/2020-artists">2020 Artists</a>
     		</li>
     		<li>
-    			<a href="<?php bloginfo('url'); ?>/tuckfest-music/friday-line-up/">Friday Line-up</a>
-    		</li>
-    		<li>
     			<a href="<?php bloginfo('url'); ?>/tuckfest-music/line-up-poster/">Line-up Poster</a>
     		</li>
     		<li>
-    			<a href="<?php bloginfo('url'); ?>/tuckfest-music/set-times/">Set Times</a>
-    		</li>
-    		<!-- <li>
     			<a href="<?php bloginfo('url'); ?>/tuckfest-music/past-line-ups/">Past Line-up</a>
-    		</li> -->
+    		</li>
     	</ul>
 	</li>
 	<li>Competitions
@@ -58,13 +52,7 @@
     		</li>
     	</ul>
 	</li>
-	<li>Clinics & Films
-		<ul class="dropdown">
-			<li><a href="<?php bloginfo('url'); ?>/demo-clinic-type/clinics">Clinics</a></li>
-			<li><a href="<?php bloginfo('url'); ?>/demo-clinic-type/films">Films</a></li>
-		</ul>
-		
-    </li>
+	<li><a href="<?php bloginfo('url'); ?>/demo-clinic-type/clinics">Clinics</a></li>
 	<li>
 		<a href="<?php bloginfo('url'); ?>/tuckfest-yoga">Yoga</a>
 	</li>
@@ -90,24 +78,27 @@
     		<li>
     			<a href="<?php bloginfo('url'); ?>/about/tuck-fest-insiders-guide/">Tuck Fest Insider’s Guide</a>
     		</li>
+            <li>
+                <a href="<?php bloginfo('url'); ?>/about/gallery/">Gallery</a>
+            </li>
+            <li>
+                <a href="<?php bloginfo('url'); ?>/about/vendors/">Vendors</a>
+            </li>
+            <li>
+                <a href="<?php bloginfo('url'); ?>/about/food-and-beverage/">Food & Beverage</a>
+            </li>
+            <li>
+                <a href="<?php bloginfo('url'); ?>/about/map/">Map</a>
+            </li>
+            <li>
+                <a href="<?php bloginfo('url'); ?>/about/accommodations/">Accommodations</a>
+            </li>
     		<li>
     			<a href="<?php bloginfo('url'); ?>/about/contact/">Contact</a>
     		</li>
-    		<li>
-    			<a href="<?php bloginfo('url'); ?>/about/map/">Map</a>
-    		</li>
-    		<li>
-    			<a href="<?php bloginfo('url'); ?>/about/gallery/">Gallery</a>
-    		</li>
-    		<li>
-    			<a href="<?php bloginfo('url'); ?>/about/accommodations/">Accommodations</a>
-    		</li>
-    		<li>
-    			<a href="<?php bloginfo('url'); ?>/about/food-and-beverage/">Food & Beverage</a>
-    		</li>
-    		<li>
-    			<a href="<?php bloginfo('url'); ?>/about/vendors/">Vendors</a>
-    		</li>
+    		
+    		
+    		
     	</ul>
 	</li>
   </ul>

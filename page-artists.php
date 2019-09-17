@@ -78,7 +78,7 @@ if($comingSoon[0] !== 'soon') :
 						jquery for Artist Description
 				-->
 					<div id="dude" class="desc artist-desc">
-						<div class="art-close"><i class="fal fa-times"></i></div>
+						<div class="art-close"><i class="fal fa-times fa-2x"></i></div>
 						<div class="art-contents"></div>
 					</div>
 			</section>

@@ -33,14 +33,28 @@ body {
 		padding: 0px;
 	}
 	&.pagecontent {
-		padding-top: 40px;
+		padding: 40px 20px 0 20px;
 		clear: both;
 		@media screen and (min-width: $tabwidth) {
-			
+			padding: 40px 0 0 0;
 		}
 		@media screen and (min-width: $deskwidth) {
 			
 		}
+	}
+}
+.sub-wrapper {
+	width: 100%;
+	margin: 0px auto;
+	clear: both;
+	@media screen and (min-width: $tabwidth) {
+		width: 100%;
+		padding: 0 10px;
+	}
+	@media screen and (min-width: $deskwidth) {
+		max-width: 700px;
+		width: 80%;
+		padding: 40px 0;
 	}
 }
 #primary {
@@ -89,7 +103,12 @@ body {
 body {
 	&.home,
 	&.page-template-page-special-title,
-	&.page-template-page-schedule
+	&.page-template-page-schedule,
+	&.page-template-page-faq,
+	&.page-template-page-photos,
+	&.page-id-2625,
+	&.parent-pageid-27,
+	&.parent-pageid-21
 	{
 		.bottom-graphic {width: 35%;}
 	}
@@ -220,7 +239,7 @@ body {
 .content-wrapper {
 	width: 100%;
 	margin: 0px auto;
-	padding: 20px;
+	padding: 0px;
 	
 	@media screen and (min-width: $tabwidth) {
 		width: 100%;
@@ -475,9 +494,10 @@ article {
 	// border-bottom: 2px dashed $color-blue;
 	position: relative;
 	float: left;
-	margin: 0 0 60px 0;
+	margin: 0 0 0px 0;
 	@media screen and (min-width: $tabwidth) {
 		padding: 40px 0;
+		margin: 0 0 60px 0;
 	}
 	@media screen and (min-width: $deskwidth) {
 
@@ -517,13 +537,36 @@ article {
 		}
 	}
 	.featured-image-mobile {
-		width: 90%;
-		margin: 20px auto;
+		width: 80%;
+		margin: 0px auto;
+		position: relative;
+		z-index: 2;
 		@media screen and (min-width: $tabwidth) {
 			display: none;
 		}
 		img {
 			width: 100%;
+		}
+		header {
+			width: 90%;
+			position: absolute;
+			bottom: 25px;
+			left: 20px;
+			text-align: center;
+			background-color: rgba($color-blue, .4);
+			border: 1px solid $color-tan;
+			z-index: 10;
+
+			h2, h2.title {
+				color: $color-tan;
+				padding: 20px 5px;
+				font-size: 12px; 
+				text-transform: uppercase;
+				&.active {
+					background-color: $color-tan;
+					color: #000;
+				}
+			}
 		}
 	}
 	.featured-image {
@@ -573,25 +616,50 @@ article {
 		width: 100%;
 		position: relative;
 		background-color: #fff;
-		// margin: -10% auto 30px 0;
-		z-index: 99;
+		
+		margin: -50px auto 30px 0;
 		color: $color-blue;
 		font-family: $font-copy;
 		font-weight: 200;
+		max-height: 0;
+		@include transition(max-height ease .3s);
+		overflow: hidden;
+		z-index: 1;
+		&.active {
+			max-height: 1000px;
+			padding:  60px 10% 10% 10%;
+			@include transition(max-height ease .3s);
+		}
 		@media screen and (min-width: $tabwidth) {
 			width: 82%;
-			// margin: -10% auto 30px 0;
+			margin: 0;
+			max-height: 1000px;
+			overflow: visible;
 		}
 		@media screen and (min-width: $deskwidth) {
 			// margin: -10% auto 30px 0;
 		}
-		
+		header.entry-header {
+			display: none;
+			@media screen and (min-width: $tabwidth) {
+				display: block;
+			}
+		}
 		h1 {
+			display: block;
 			text-align: left;
 			font-size: 14pt;
 	    	letter-spacing: 0.20em;
 	    	text-transform: uppercase;
 	    	color: $color-orange;
+	    	@media screen and (min-width: $tabwidth) {
+	    		display: block;
+	    	}
+		}
+		.art-close {
+			@media screen and (min-width: $tabwidth) {
+				display: none;
+			}
 		}
 		
 	}

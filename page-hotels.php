@@ -15,20 +15,21 @@ get_header(); ?>
 			<?php
 			while ( have_posts() ) : the_post(); 
 
-			get_template_part('inc/banner');
+				get_template_part('inc/special-title');
+				get_template_part('inc/banner');
 
 			?>
-
+			<div class="sub-wrapper">
 				<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-					<header class="entry-header">
+					<!--<header class="entry-header">
 						<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-					</header><!-- .entry-header -->
+					</header> .entry-header -->
 
 					<div class="entry-content">
 						<?php the_content(); ?>
 					</div><!-- .entry-content -->
 				</div><!-- #post-## -->
-
+			</div>
 			<?php endwhile; // End of the loop.?>
 			<?php
 			$wp_query = new WP_Query();
@@ -38,14 +39,33 @@ get_header(); ?>
 			));
 			if ($wp_query->have_posts()) : ?>
 				<section class="types">
-					<?php while ($wp_query->have_posts()) : $wp_query->the_post(); 
+					<?php while ($wp_query->have_posts()) : $wp_query->the_post(); $i++;
 						$hash = sanitize_title_with_dashes(get_the_title());
+						if($i==2) {
+							$class='rightz';
+							$i=0;
+						} else {
+							$class='leftz';
+						}
 					?>
-					<article id="<?php echo $hash; ?>" <?php post_class(); ?>>
-						<div class="featured-image">
-						<header class="entry-header">
+					<article id="<?php echo $hash; ?>" class="basic <?php echo $class; ?>">
+					<div class="featured-image-mobile">
+						<?php 
+						if(has_post_thumbnail()) {
+							the_post_thumbnail('tile');
+						} else { ?>
+							<img src="<?php echo $comingSoonImage['url']; ?>">
+						<?php } ?>
+					</div>
+					<div class="copy">
+						<!-- <header class="entry-header">
 							<?php the_title( '<h1 class="">', '</h1>' ); ?>
 						</header><!-- .entry-header -->
+						<div class="entry-content">
+							<?php the_content(); ?>
+						</div><!-- .entry-content -->
+						<!-- <div class="offset-border"></div> -->
+						<div class="featured-image">
 							<?php 
 							if(has_post_thumbnail()) {
 								the_post_thumbnail('tile');
@@ -53,13 +73,8 @@ get_header(); ?>
 								<img src="<?php echo $comingSoonImage['url']; ?>">
 							<?php } ?>
 						</div>
-						<div class="copy">
-							<div class="entry-content">
-								<?php the_content(); ?>
-							</div><!-- .entry-content -->
-							<div class="offset-border"></div>
-						</div>
-					</article><!-- #post-## -->
+					</div>
+				</article><!-- #post-## -->
 					<?php endwhile; ?>
 				</section>
 			<?php endif; ?>

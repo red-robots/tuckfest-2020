@@ -16,9 +16,7 @@ get_header(); ?>
 			while ( have_posts() ) : the_post(); 
 				get_template_part('inc/banner');
 			?>
-				<header class="entry-header">
-						<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-					</header><!-- .entry-header -->
+				<div class="wrapper">
 					<div class="entry-content">
 						<?php //the_content(); ?>
 						<section class="faqs">
@@ -38,6 +36,7 @@ get_header(); ?>
 						            </div><!-- faqrow -->
 						<?php endwhile; endif; // end faq's ?>
 					</div>
+				</div>
 			<?php endwhile; // End of the loop.
 			?></section>
 

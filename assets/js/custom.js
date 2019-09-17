@@ -86,6 +86,15 @@ $('.main-navigation li.music').on('click', function() {
     $('ul.music').addClass('active');
 });
 
+$('.js-tileinfo').on('click', function() {
+    $(this).find('.mobile-title').addClass('active');
+    $(this).next('.copy').addClass('active');
+});
+$('.js-closecopy').on('click', function() {
+    $(this).parent().removeClass('active');
+     $(this).parent().prev('.js-tileinfo').find('.mobile-title').removeClass('active');
+});
+
 
 
 function placeAfter($block) {
@@ -237,6 +246,35 @@ $('#filters select').each(function(){
     });
 
 });
+
+
+
+  
+    $('.drops .select .select-styled').click(function(e) {
+        e.stopPropagation();
+        $('div.select-styled.active').not(this).each(function(){
+            $(this).removeClass('active').next('ul.select-options').hide();
+        });
+        $(this).toggleClass('active').next('ul.select-options').toggle();
+    });
+  
+     $('.drops .select ul.select-options').click(function(e) {
+        e.stopPropagation();
+        $styledSelect.text($(this).text()).removeClass('active');
+        $this.val($(this).attr('rel'));
+        $list.hide();
+        //console.log($this.val());
+        //alert($this.val());
+        $( ".sched-act" ).css( "display", "none" );
+        var val = $(this).val();
+        $($this.val()).css('display', 'block');
+    });
+  
+    $(document).click(function() {
+        $('div.select-styled.active').removeClass('active');
+        $('.drops .select ul.select-options').hide();
+    });
+
 // $('#filter_by_activity').change(function() {
 //     alert('The option with value ' + $(this).val() + ' and text ' + $(this).text() + ' was selected.');
 //     $( ".sched-act" ).css( "display", "none" );

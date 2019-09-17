@@ -11,17 +11,19 @@
 	<div class="desktop">
 		<div class="menu-main-menu-container">
 			<ul id="primary-menu" class="menu">
-				<li>
-    				<a href="<?php bloginfo('url'); ?>/schedule">Schedule</a>
-			    </li>
-				<li class="music dimmer">Music</li>
-				<li class="competitions dimmer">Competitions</li>
-				<li class="clinics dimmer">Clinics & Films</li>
+				<li class="about dimmer">About</li>
+				<li class="buy dimmer">Buy</li>
 				<li>
 					<a href="<?php bloginfo('url'); ?>/tuckfest-yoga">Yoga</a>
 				</li>
-				<li class="buy dimmer">Buy</li>
-				<li class="about dimmer">About</li>
+				<li class="clinics dimmer">
+					<a href="<?php bloginfo('url'); ?>/demo-clinic-type/clinics/">Clinics</a>
+				</li>
+				<li class="competitions dimmer">Competitions</li>
+				<li class="music dimmer">Music</li>
+				<li>
+    				<a href="<?php bloginfo('url'); ?>/schedule">Schedule</a>
+			    </li>
     		</ul>
 		</div>
 	</div>
@@ -87,22 +89,19 @@
 		<a href="<?php bloginfo('url'); ?>/about/tuck-fest-insiders-guide/">Tuck Fest Insider’s Guide</a>
 	</li>
 	<li>
-		<a href="<?php bloginfo('url'); ?>/about/contact/">Contact</a>
-	</li>
-	<li>
-		<a href="<?php bloginfo('url'); ?>/about/map/">Map</a>
-	</li>
-	<li>
 		<a href="<?php bloginfo('url'); ?>/about/gallery/">Gallery</a>
 	</li>
 	<li>
-		<a href="<?php bloginfo('url'); ?>/about/accommodations/">Accommodations</a>
+		<a href="<?php bloginfo('url'); ?>/about/vendors/">Vendors</a>
 	</li>
 	<li>
 		<a href="<?php bloginfo('url'); ?>/about/food-and-beverage/">Food & Beverage</a>
 	</li>
 	<li>
-		<a href="<?php bloginfo('url'); ?>/about/vendors/">Vendors</a>
+		<a href="<?php bloginfo('url'); ?>/about/map/">Map</a>
+	</li>
+	<li>
+		<a href="<?php bloginfo('url'); ?>/about/contact/">Contact</a>
 	</li>
 </ul>
 <ul class="submenu music">

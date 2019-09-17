@@ -26,19 +26,20 @@ wp_reset_postdata();
 // $obj = get_queried_object();
 $post_id = $GLOBALS['pageID'];
 $postType = get_post_type($post_id);
-// $hpID = get_the_ID();
-echo '<pre>';
-print_r($post_id);
-echo '</pre>';
-echo get_the_ID();
+$hpID = get_the_ID();
+// echo '<pre>';
+// print_r($post_id);
+// echo '</pre>';
+// echo get_the_ID();
 // die;
 
 // $post = get_post($post_id); 
 // $page = $post->post_name;
-//// 1876=home 3251=insiders guide 19=Schedule
-$mtnPageArray = array(1876, 3251, 19);
-//// 3445=2020Artists
-$tigerPageArray = array(3445);
+//// 1876=home 3251=insiders guide 19=Schedule 98=faq 1908=gallery 2625=accomedations 100=contact
+//// 3034=vendors 2759=fnb 1017=race and comp reg 3445=chiped and timed events 529=terrace
+$mtnPageArray = array(1876, 3251, 19, 98, 1908, 2625, 100, 3034, 2759, 1017, 529, 3445);
+//// 3442=2020Artists
+$tigerPageArray = array(3442);
 //// 2131=Yoga
 $yogaPageArray = array(2131);
 // echo $obj->music;
@@ -61,25 +62,18 @@ if( $hpID == '1876' ) {
 		$img = '-yoga.png';
 	}
 }
-// if($page=='blog') {
-// 	// $page = 'home';
-// 	$img = '-mountains.png';
-// } elseif( $page == 'tuckfest-music') {
-// 	// $page = 'music';
-// 	$img = '-tiger.png';
-// } elseif( $page == 'competition' || is_post_type_archive('competition') ) {
-// 	// $page = 'competition';
-// 	$img = '-peaks.png';
-// } else {
-// 	// $page = 'home';
-// 	$img = '-mountains.png';
-// }
-
+/* Pages not to show
+*	3347 = lineup poster
+*
+*
+*/
+if( !is_page( array(3447) )) {
 ?>
 <div class="bottom-graphic type-<?php echo $postType; ?>">
 <?php  ?>
 	<img src="<?php echo bloginfo('stylesheet_directory'); ?>/images/background<?php echo $img; ?>">
 </div>
+<?php } ?>
 
 	</div><!-- #content -->
 

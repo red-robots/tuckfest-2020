@@ -26,7 +26,7 @@ get_header(); ?>
 						</div>
 					</header><!-- .entry-header -->
 
-					<div class="entry-content">
+					<div class="entry-content pagecontent">
 						<?php the_content(); ?>
 					</div><!-- .entry-content -->
 				</div><!-- #post-## -->

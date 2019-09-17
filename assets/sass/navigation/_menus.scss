@@ -3,8 +3,10 @@ nav.subnav {
   width: 100%;
   float: left;
   padding: 20px 0;
+  display: none;
   @media screen and (min-width: $tabwidth) {
     padding: 20px 10px;
+    display: block;
   }
   @media screen and (min-width: $deskwidth) {
     padding: 20px 0;

@@ -10,9 +10,7 @@
 			<div class="waves">
 				<img src="<?php bloginfo('stylesheet_directory'); ?>/images/waves.png">
 			</div>
-		<?php } ?>
-		<?php 
-		if( is_page(1017) ) { // Race and Comp Registration ?>
+		<?php } elseif( is_page(1017) ) { // Race and Comp Registration ?>
 			<h1 class="">
 				<span class="tan small center">Race and Comp</span>
 				<span class="orange center">Registration</span>
@@ -20,11 +18,16 @@
 			<div class="dots">
 				<img src="<?php bloginfo('stylesheet_directory'); ?>/images/dots.png">
 			</div>
-		<?php } ?>
-		<?php 
-		if( is_page(19) ) { // Race and Comp Registration ?>
+		<?php } elseif( is_page(19) ) { // Race and Comp Registration ?>
 			<h1 class="">
 				<span class="tan ">Schedule</span>
+			</h1>
+			<div class="waves">
+				<img src="<?php bloginfo('stylesheet_directory'); ?>/images/waves.png">
+			</div>
+		<?php } else { ?>
+			<h1 class="">
+				<span class="tan "><?php the_title(); ?></span>
 			</h1>
 			<div class="waves">
 				<img src="<?php bloginfo('stylesheet_directory'); ?>/images/waves.png">
