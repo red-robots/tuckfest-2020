@@ -248,10 +248,11 @@ section.schedule-music {
 	  position: relative;
 	  font-size: 12px;
 	  width: 300px;
-	  height: 50px;
+	  height: 60px;
 	  @media screen and (min-width: $tabwidth) {
 	  	width: 380px;
 	  	font-size: 14px;
+	  	height: 50px;
 	}
 	  // padding: 15px 0;
 	}
@@ -277,9 +278,14 @@ section.schedule-music {
 			size: 16px;
 		}
 		background: {
-			position: right 20px top 20px;
+			position: right 135px top 40px;
 			image: url(images/select-downarrow.png);
 			repeat: no-repeat;
+			size: 20px;
+		}
+		@media screen and (min-width: $tabwidth) {
+			background-position: right 20px top 20px;
+			background-size: 25px;
 		}
 		@include transition(all 0.2s ease-in);
 		@media screen and (min-width: $tabwidth) {
@@ -708,7 +714,7 @@ section.artists, section.home-tiles {
 		// height: 300px;
 		width: 70%;
 		position: relative;
-		overflow: hidden;
+		// overflow: hidden;
 		cursor: pointer;
 		@media screen and (min-width: $tabwidth) {
 			float: left;
@@ -746,11 +752,12 @@ section.artists, section.home-tiles {
 		}
 		&:hover {
 			img {
-				transform: scale(1.1);
+				// transform: scale(1.1);
 			}
 		}
 	}
-	.desc {
+	.desc,
+	.showlater {
 		// max-height: 0;
 		// overflow: hidden;
 		background-color: #fff;
@@ -766,7 +773,15 @@ section.artists, section.home-tiles {
 		}
 		
 	}
-	.showlater {display: none;}
+	.showlater {
+		display: none;
+		&.active {
+			display: block;
+			max-height: 1000px;
+			width: 300%;
+			margin-left: -100%;
+		}
+	}
 }
 .art-close {
 	color: $color-sea-green;

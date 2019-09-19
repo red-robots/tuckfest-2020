@@ -18,6 +18,23 @@ $comingSoonImage = get_field('coming_soon', 'option');
 
 		<?php
 		$obj = get_queried_object();
+		$tax = $obj->taxonomy;
+		// echo $tax;
+		$catArgs = array(
+			'taxonomy' => $tax,
+			'title_li' => '',
+		);
+		?>
+		<?php if( $tax != 'demo_clinic_type') { ?>
+		<div class="drops">
+			<div class="select">
+				<div class="select-styled blue"><?php echo $obj->name; ?></div>
+				<ul class="select-options blue">
+					<?php wp_list_categories($catArgs); ?>
+				</ul>
+			</div>
+		</div>
+		<?php } 
 
 		// echo '<pre>';
 		// print_r($obj);

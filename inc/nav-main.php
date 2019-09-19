@@ -13,15 +13,15 @@
 			<ul id="primary-menu" class="menu">
 				<li class="about dimmer">About</li>
 				<li class="buy dimmer">Buy</li>
-				<li>
+				<li class="yoga ">
 					<a href="<?php bloginfo('url'); ?>/tuckfest-yoga">Yoga</a>
 				</li>
 				<li class="clinics dimmer">
 					<a href="<?php bloginfo('url'); ?>/demo-clinic-type/clinics/">Clinics</a>
 				</li>
 				<li class="competitions dimmer">Competitions</li>
-				<li class="music dimmer">Music</li>
-				<li>
+				<li class="music dimmer tuckfest-music">Music</li>
+				<li class="schedule ">
     				<a href="<?php bloginfo('url'); ?>/schedule">Schedule</a>
 			    </li>
     		</ul>
@@ -65,10 +65,10 @@
 		<a href="<?php bloginfo('url'); ?>/competition-type/kayak/">Kayak</a>
 	</li>
 </ul>
-<ul class="submenu clinics">
+<!-- <ul class="submenu clinics">
 	<li><a href="<?php bloginfo('url'); ?>/demo-clinic-type/clinics">Clinics</a></li>
 	<li><a href="<?php bloginfo('url'); ?>/demo-clinic-type/films">Films</a></li>
-</ul>
+</ul> -->
 <ul class="submenu buy">
 	<!-- <li>
 		<a href="<?php bloginfo('url'); ?>/buy/info/">Info</a>

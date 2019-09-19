@@ -138,16 +138,20 @@ if( $tax != '' ) {
 
 
 if( $postType == 'music' ) {
-	if( $term == 'thursday') {
-		$page = 'thursday-line-up';
-	} elseif( $term == 'friday') {
-		$page = 'friday-line-up';
-	} elseif( $term == 'saturday') {
-		$page = 'saturday-line-up';
-	} elseif( $term == 'sunday') {
-		$page = 'sunday-line-up';
-	}
-	$url = get_bloginfo('url').'/tuckfest-music/'.$page.'/#'.$hash;
+	// if( $term == 'thursday') {
+	// 	$page = 'thursday-line-up';
+	// } elseif( $term == 'friday') {
+	// 	$page = 'friday-line-up';
+	// } elseif( $term == 'saturday') {
+	// 	$page = 'saturday-line-up';
+	// } elseif( $term == 'sunday') {
+	// 	$page = 'sunday-line-up';
+	//}
+	// Chnage for
+	$page = '2020-artists';
+	echo 'mussiiic';
+
+	$url = get_bloginfo('url').'/tuckfest-music/2020-artists/#'.$hash;
 } else {
 	
 	$url = get_bloginfo('url').'/'.$taxSlug.'/'.$term.'/#'.$hash;
@@ -193,11 +197,10 @@ if( $i == 1 ) {
 	<div class="title">
 		<?php 
 		// Temporary link for music
-		if(get_post_type() == 'music') { ?>
-			<a href="<?php bloginfo('url'); ?>/tuckfest-music">
-		 <?php } else { ?>
+		//if(get_post_type() == 'music') { ?>
+		 <?php //} else { ?>
 			<a href="<?php echo $url; ?>">
-		<?php } ?>
+		<?php //} ?>
 			<?php the_title(); ?>
 			<!-- <br>|| <?php echo $classes; ?> -->
 		</a>

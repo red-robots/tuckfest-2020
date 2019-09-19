@@ -1,4 +1,7 @@
-
+// dont show chipped timed events
+  li.page-item-3445 {
+    display:none !important ; 
+  }
 nav.subnav {
   width: 100%;
   float: left;
@@ -23,6 +26,7 @@ nav.subnav {
     position: relative;
     text-transform: uppercase;
     font-size: 13px;
+    font-family: $font-coco;
   }
   a {
     color: $color-sea-green;
@@ -61,6 +65,7 @@ ul.submenu {
   background-color: #fff;
   li {
     display: none;
+    font-family: $font-coco;
   }
   &.active {
     max-height: 1000px;
@@ -101,16 +106,25 @@ ul.submenu {
     position: relative;
     text-transform: uppercase;
     font-size: 13px;
-    font-family: "Helvetica", sans-serif;
+    // font-family: "Helvetica", sans-serif;
     padding: 5px 5px 5px 0;
     // &:first-of-type {
     //  border-bottom: 2px solid $color-blue;
     // }
-    &:hover > ul,
-    &.focus > ul {
-      // left: 100%;
-      
-
+    &:after {
+      background-color: $color-sea-green;
+      width: 0%;
+      height: 2px;
+      position: absolute;
+      bottom: -5px;
+      left: 5px;
+      content: '';
+       @include transition(all ease .2s);
+    }
+    &.active, &:hover {
+      &:after {
+        width: 50%;
+      }
     }
     @media screen and (min-width: $tabwidth) {
           max-height: 1000px;
@@ -242,7 +256,7 @@ ul.submenu {
         position: relative;
         text-transform: uppercase;
         font-size: 13px;
-        font-family: "Helvetica", sans-serif;
+        // font-family: "Helvetica", sans-serif;
         padding: 5px 5px 5px 0;
 				// &:first-of-type {
 				// 	border-bottom: 2px solid $color-blue;
@@ -314,6 +328,7 @@ ul.submenu {
 		font-weight: 200;
 		width: 100%;
 		margin: 10px 0;
+    cursor: pointer;
 		@media screen and (min-width: $tabwidth) {
 			padding: 0% 10px;
       color: $color-orange;
@@ -331,9 +346,21 @@ ul.submenu {
       line-height: 1.3;
 		}
 
-		&:hover > a,
-		&.focus > a {
-		}
+		&:after {
+      background-color: $color-orange;
+      width: 0%;
+      height: 2px;
+      position: absolute;
+      bottom: -5px;
+      left: 5px;
+      content: '';
+       @include transition(all ease .2s);
+    }
+    &.active, &:hover {
+      &:after {
+        width: 50%;
+      }
+    }
 	}
 	a {
 		display: block;
@@ -345,10 +372,7 @@ ul.submenu {
 		@media screen and (min-width: $deskwidth) {
 			
 		}
-		&:hover {
-			// background-color: rgba(#fff, 1);
-			// color: $color-orange;
-		}
+		
 	}
 
 	.current_page_item > a,

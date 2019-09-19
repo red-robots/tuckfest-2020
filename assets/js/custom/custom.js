@@ -18,50 +18,56 @@ jQuery(document).ready(function ($) {
       $( "#masthead" ).addClass( "scrolled");
     });
 
+
 // get height of header 
 var $height = $('.site-header').height();
 $('#content').css('margin-top', $height);
 
 
+/*
+
+    bump content down when nav is fixed
+
+
+*/
 var myElem = document.getElementById('js-tsn');
 if (myElem === null) {
     $('.site-content').addClass('no-subnav');
 }
+/*
+
+    add active to naviations
 
 
-// function whichAnimationEvent(){
-//   var t,
-//       el = document.createElement("fakeelement");
+*/
+if (window.location.href.indexOf("tuckfest-music") > -1) {
+    // alert('yes');
+    $('.main-navigation li.music').addClass('active');
+}
+if (window.location.href.indexOf("competition-type") > -1) {
+    $('.main-navigation li.competitions').addClass('active');
+}
+if (window.location.href.indexOf("schedule") > -1) {
+    $('.main-navigation li.schedule').addClass('active');
+}
+if (window.location.href.indexOf("clinics") > -1) {
+    $('.main-navigation li.clinics').addClass('active');
+}
+if (window.location.href.indexOf("tuckfest-yoga") > -1) {
+    $('.main-navigation li.yoga').addClass('active');
+}
+if (window.location.href.indexOf("buy") > -1) {
+    $('.main-navigation li.buy').addClass('active');
+}
+if (window.location.href.indexOf("about") > -1) {
+    $('.main-navigation li.about').addClass('active');
+}
+/*
 
-//   var animations = {
-//     "animation"      : "animationend",
-//     "OAnimation"     : "oAnimationEnd",
-//     "MozAnimation"   : "animationend",
-//     "WebkitAnimation": "webkitAnimationEnd"
-//   }
-
-//   for (t in animations){
-//     if (el.style[t] !== undefined){
-//       return animations[t];
-//     }
-//   }
-// }
-// var animationEvent = whichAnimationEvent();
-// $(".main-navigation li").click(function(){
-//   $('.main-navigation li ul').removeClass("active");
-//   $(this).one(animationEvent,
-//               function(event) {
-//     $(this).find('ul.submenu').addClass('active');
-//   });
-// });
+    Nav Dropdowns
 
 
-// $('.main-navigation li').on('click', function() {
-//     $('#dimmer').addClass('activate');
-//     $('.main-navigation li ul').removeClass('active');
-//     $(this).find('ul.submenu').addClass('active');
-// });
-
+*/
 $('.main-navigation li.dimmer').on('click', function() {
     $('#dimmer').addClass('activate');
 });
@@ -77,10 +83,10 @@ $('.main-navigation li.about').on('click', function() {
     $('ul.submenu').removeClass('active');
     $('ul.about').addClass('active');
 });
-$('.main-navigation li.clinics').on('click', function() {
-    $('ul.submenu').removeClass('active');
-    $('ul.clinics').addClass('active');
-});
+// $('.main-navigation li.clinics').on('click', function() {
+//     $('ul.submenu').removeClass('active');
+//     $('ul.clinics').addClass('active');
+// });
 $('.main-navigation li.music').on('click', function() {
     $('ul.submenu').removeClass('active');
     $('ul.music').addClass('active');
@@ -94,6 +100,9 @@ $('.js-closecopy').on('click', function() {
     $(this).parent().removeClass('active');
      $(this).parent().prev('.js-tileinfo').find('.mobile-title').removeClass('active');
 });
+
+
+// Artists page
 
 
 
@@ -111,23 +120,70 @@ $(window).on('resize', function() {
     }
 });
 
+// supposed to be open when you visit an anchor
+
+window.onload = function() {
+var hash = window.location.hash; // would be "#div1" or something
+if(hash != "") {
+    // alert(this);
+    var id = hash.substr(1); // get rid of #
+    // document.getElementById(id).style.display = 'block';
+    var artist = document.getElementById(id);
+    // alert(artist);
+    var $html = $(artist).find('.showlater').html();
+    $('#dude').css('display','inline-block');
+    $('#dude').css('max-height','1000px');
+    var top = $(artist).offset().top;
+    var $blocks = $(artist).nextAll('div');
+    // alert(top);
+    if ($blocks.length == 0) {
+        placeAfter($(artist));
+        return false;
+    }
+    $blocks.each(function(i, j) {
+        
+        
+
+        if($(artist).offset().top != top) {
+            placeAfter($(artist).prev('div'));
+            // alert('!=');
+            return false;
+
+        } else if ((i + 1) == $blocks.length) {
+            placeAfter($(artist));
+            // alert('+1');
+            return false;
+        }
+    });
+    $( ".art-contents" ).empty();
+    $('h2.artist-title').removeClass('active');
+    $(this).find('.artist-title').addClass('active');
+    $('.art-contents').append($html);
+
+}};
+
 $('.wrapblock').on('click', function() {
+    // alert(this);
     var $html = $(this).find('.showlater').html();
     $chosen = $(this);
     $('#dude').css('display','inline-block');
-    $('#dude').css('max-height','1000px');
+    $('#dude').css('max-height','1500px');
     var top = $(this).offset().top;
     var $blocks = $(this).nextAll('.wrapblock');
     if ($blocks.length == 0) {
         placeAfter($(this));
         return false;
+
     }
     $blocks.each(function(i, j) {
+        
         if($(this).offset().top != top) {
             placeAfter($(this).prev('.wrapblock'));
+            // alert('!=');
             return false;
         } else if ((i + 1) == $blocks.length) {
             placeAfter($(this));
+            // alert('1');
             return false;
         }
     });
@@ -180,14 +236,6 @@ $('.art-close').on('click', function() {
         $(this).find('ul.sub-menu').css('maxHeight:1000');
     });
 
-// $('select#filter_by_activity').on('change', function(){ 
-//   //do stuff here, eg. 
-//   //alert($(this).val());
-//   console.log('wer');
-//   // if ($(this).val() == 'adventure-obstacle') { //check the selected option etc.
-//   //    //do more stuff
-//   // }
-// });
 /*
     *
     *   Select Dropdowns
@@ -302,6 +350,7 @@ $('.burger, .overlay').click(function(){
   $('body').toggleClass('overflow');
 });
 $('nav.mobilemenu li').click(function() {
+    $('nav.mobilemenu ul.dropdown').removeClass('active');
     $(this).find('ul.dropdown').toggleClass('active');
 });
 

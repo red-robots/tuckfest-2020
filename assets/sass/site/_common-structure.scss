@@ -14,7 +14,7 @@ body {
 		// margin-top: 32px;
 		// #page {margin-top: 32px;}
 		#masthead {
-			top: 32px;
+			@media screen and (min-width: $tabwidth) {top: 32px;}
 		}
 	}
 }
@@ -432,18 +432,26 @@ header.special-title,
 		margin-left: 20%;
 	}
 	.waves {
-		width: 50px;
+		width: 25px;
 		position: absolute;
 		right: 5%;
-		top: 50%;
+		top: 70%;
 		z-index: 100000;
+		@media screen and (min-width: $tabwidth) {
+			width: 50px;
+			top: 50%;
+		}
 	}
 	.dots {
-		width: 50px;
+		width: 25px;
 		position: absolute;
 		left: 5%;
-		top: 15%;
+		top: 70%;
 		z-index: 100000;
+		@media screen and (min-width: $tabwidth) {
+			width: 50px;
+			top: 15%;
+		}
 	}
 }
 .mobile-header-scroll {
