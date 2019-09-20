@@ -1673,23 +1673,23 @@ input[type="text"],input[type="email"],input[type="url"],input[type="password"],
 textarea{padding-left:3px;width:100%}
 li.page-item-3445{display:none !important}
 nav.subnav{width:100%;float:left;padding:20px 0;display:none}
-@media screen and (min-width:750px){nav.subnav{padding:20px 10px;display:block}
+@media screen and (min-width:750px){nav.subnav{padding:20px 10px;display:block;text-align:center}
 }@media screen and (min-width:1200px){nav.subnav{padding:20px 0}
 }nav.subnav ul{margin:0;padding:0;list-style:none}
 nav.subnav li{display:inline-block;margin:0 20px 0 0;width:auto;position:relative;text-transform:uppercase;font-size:13px;font-family:"CoCo",sans-serif}
 nav.subnav a{color:#6abea3;text-decoration:none;padding:5px}
 nav.subnav a:after{background-color:#6abea3;width:0;height:2px;position:absolute;bottom:-5px;left:5px;content:'';-webkit-transition:all ease .2s;transition:all ease .2s}
 nav.subnav a.active:after,nav.subnav a:hover:after{width:50%}
-ul.submenu{position:fixed;top:0;left:0;z-index:99;max-height:0;width:100%;margin:0;overflow:hidden;-webkit-transition:max-height ease .5s;transition:max-height ease .5s;background-color:#fff}
+ul.submenu{position:fixed;top:0;left:0;z-index:99;max-height:0;width:100%;margin:0;overflow:hidden;-webkit-transition:max-height ease .5s;transition:max-height ease .5s;background-color:#fff;text-align:center}
 ul.submenu li{display:none;font-family:"CoCo",sans-serif}
 ul.submenu.active{max-height:1000px;padding:128px 10% 25px 10%;-webkit-transition:max-height ease .5s;transition:max-height ease .5s}
 @media screen and (min-width:750px){ul.submenu.active{padding:128px 20px 25px 20px}
 }@media screen and (min-width:1200px){ul.submenu.active{padding:128px 10% 25px 10%}
-}ul.submenu.active li{display:block}
-@media screen and (min-width:750px){ul.submenu{display:block}
+}ul.submenu.active li{display:inline-block}
+@media screen and (min-width:750px){ul.submenu{display:inline-block}
 }ul.submenu ul{top:0}
 @media screen and (min-width:750px){ul.submenu ul{display:block}
-}ul.submenu li{border-left:0;text-align:left;width:auto;float:left;display:inline-block;margin:0 20px 0 0;width:auto;position:relative;text-transform:uppercase;font-size:13px;padding:5px 5px 5px 0}
+}ul.submenu li{border-left:0;text-align:left;width:auto;display:inline-block;margin:0 20px 0 0;width:auto;position:relative;text-transform:uppercase;font-size:13px;padding:5px 5px 5px 0}
 ul.submenu li:after{background-color:#6abea3;width:0;height:2px;position:absolute;bottom:-5px;left:5px;content:'';-webkit-transition:all ease .2s;transition:all ease .2s}
 ul.submenu li.active:after,ul.submenu li:hover:after{width:50%}
 @media screen and (min-width:750px){ul.submenu li{max-height:1000px}
@@ -1933,8 +1933,9 @@ body{font-family:"Helvetica",sans-serif;background-size:100%;background-color:#f
 .site-content{width:100%;position:relative;float:left;z-index:2;padding-bottom:50px}
 @media screen and (min-width:750px){.site-content{padding-bottom:120px}
 }@media screen and (min-width:750px){.site-content{padding-bottom:280px}
-}.bottom-graphic{position:absolute;z-index:1;bottom:0;right:0;line-height:0}
+}.bottom-graphic{position:fixed;z-index:1;bottom:0;right:0;line-height:0}
 .bottom-graphic img{width:100%}
+.bottom-graphic.scrolled{position:absolute}
 body.home .bottom-graphic,body.page-template-page-special-title .bottom-graphic,body.page-template-page-schedule .bottom-graphic,body.page-template-page-faq .bottom-graphic,body.page-template-page-photos .bottom-graphic,body.page-id-2625 .bottom-graphic,body.parent-pageid-27 .bottom-graphic,body.parent-pageid-21 .bottom-graphic{width:35%}
 body.page-template-page-artists .bottom-graphic,body.tax-competition_type .bottom-graphic{width:66%}
 body.tax-demo_clinic_type .bottom-graphic{width:25%}

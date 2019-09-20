@@ -91,13 +91,16 @@ body {
 	
 }
 .bottom-graphic {
-	position: absolute;
+	position: fixed;
 	z-index: 1;
 	bottom: 0;
 	right: 0;
 	line-height: 0;
 	img {
 		width: 100%;
+	}
+	&.scrolled {
+		position: absolute;
 	}
 }
 body {

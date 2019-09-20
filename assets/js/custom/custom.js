@@ -73,23 +73,27 @@ $('.main-navigation li.dimmer').on('click', function() {
 });
 $('.main-navigation li.buy').on('click', function() {
     $('ul.submenu').removeClass('active');
+    $('.main-navigation li').removeClass('active');
     $('ul.buy').addClass('active');
+    $(this).addClass('active');
 });
 $('.main-navigation li.competitions').on('click', function() {
     $('ul.submenu').removeClass('active');
+    $('.main-navigation li').removeClass('active');
     $('ul.competitions').addClass('active');
+    $(this).addClass('active');
 });
 $('.main-navigation li.about').on('click', function() {
     $('ul.submenu').removeClass('active');
+    $('.main-navigation li').removeClass('active');
     $('ul.about').addClass('active');
+    $(this).addClass('active');
 });
-// $('.main-navigation li.clinics').on('click', function() {
-//     $('ul.submenu').removeClass('active');
-//     $('ul.clinics').addClass('active');
-// });
 $('.main-navigation li.music').on('click', function() {
     $('ul.submenu').removeClass('active');
+    $('.main-navigation li').removeClass('active');
     $('ul.music').addClass('active');
+    $(this).addClass('active');
 });
 
 $('.js-tileinfo').on('click', function() {
@@ -100,7 +104,18 @@ $('.js-closecopy').on('click', function() {
     $(this).parent().removeClass('active');
      $(this).parent().prev('.js-tileinfo').find('.mobile-title').removeClass('active');
 });
+// footer
+$(document).scroll(function() {
+    
+    if($('.bottom-graphic').offset().top + $('.bottom-graphic').height() >= $('.site-footer').offset().top - 10) {
+        $('.bottom-graphic').css('position', 'absolute');
+    }
 
+    if($(document).scrollTop() + window.innerHeight < $('.site-footer').offset().top) {
+        $('.bottom-graphic').css('position', 'fixed'); // restore when you scroll up
+    }
+});
+            
 
 // Artists page
 

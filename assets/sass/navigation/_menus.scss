@@ -10,6 +10,7 @@ nav.subnav {
   @media screen and (min-width: $tabwidth) {
     padding: 20px 10px;
     display: block;
+    text-align: center;
   }
   @media screen and (min-width: $deskwidth) {
     padding: 20px 0;
@@ -63,6 +64,7 @@ ul.submenu {
   overflow: hidden;
   @include transition(max-height ease .5s);
   background-color: #fff;
+  text-align: center;
   li {
     display: none;
     font-family: $font-coco;
@@ -78,11 +80,11 @@ ul.submenu {
     }
     @include transition(max-height ease .5s);
     li {
-      display: block;
+      display: inline-block;
     }
   }
   @media screen and (min-width: $tabwidth) {
-    display: block;
+    display: inline-block;
   }
   
   ul {
@@ -99,7 +101,7 @@ ul.submenu {
     border-left: 0;
     text-align: left;
     width: auto;
-    float: left;
+    // float: left;
     display: inline-block;
     margin: 0 20px 0 0;
     width: auto;
