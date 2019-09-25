@@ -43,42 +43,8 @@ if($comingSoon[0] !== 'soon') :
 			));
 			if ($wp_query->have_posts()) : ?>
 				<section class="types">
-					<?php while ($wp_query->have_posts()) : $wp_query->the_post(); $i++;
-						$hash = sanitize_title_with_dashes(get_the_title());
-						if($i==2) {
-							$class='rightz';
-							$i=0;
-						} else {
-							$class='leftz';
-						}
-					?>
-					<article id="<?php echo $hash; ?>" class="basic <?php echo $class; ?>">
-					<div class="featured-image-mobile">
-						<?php 
-						if(has_post_thumbnail()) {
-							the_post_thumbnail('tile');
-						} else { ?>
-							<img src="<?php echo $comingSoonImage['url']; ?>">
-						<?php } ?>
-					</div>
-					<div class="copy">
-						<!-- <header class="entry-header">
-							<?php the_title( '<h1 class="">', '</h1>' ); ?>
-						</header><!-- .entry-header -->
-						<div class="entry-content">
-							<?php the_content(); ?>
-						</div><!-- .entry-content -->
-						<!-- <div class="offset-border"></div> -->
-						<div class="featured-image">
-							<?php 
-							if(has_post_thumbnail()) {
-								the_post_thumbnail('tile');
-							} else { ?>
-								<img src="<?php echo $comingSoonImage['url']; ?>">
-							<?php } ?>
-						</div>
-					</div>
-				</article><!-- #post-## -->
+					<?php while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
+					<?php include( locate_template('inc/article.php', false, false)); ?>
 					<?php endwhile; ?>
 				</section>
 			<?php endif; ?>

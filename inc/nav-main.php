@@ -65,10 +65,6 @@
 		<a href="<?php bloginfo('url'); ?>/competition-type/kayak/">Kayak</a>
 	</li>
 </ul>
-<!-- <ul class="submenu clinics">
-	<li><a href="<?php bloginfo('url'); ?>/demo-clinic-type/clinics">Clinics</a></li>
-	<li><a href="<?php bloginfo('url'); ?>/demo-clinic-type/films">Films</a></li>
-</ul> -->
 <ul class="submenu buy">
 	<!-- <li>
 		<a href="<?php bloginfo('url'); ?>/buy/info/">Info</a>
@@ -87,6 +83,9 @@
 	</li>
 	<li>
 		<a href="<?php bloginfo('url'); ?>/about/tuck-fest-insiders-guide/">Tuck Fest Insider’s Guide</a>
+	</li>
+	<li>
+		<a href="<?php bloginfo('url'); ?>/about/about-tuck-fest/">About Tuck Fest</a>
 	</li>
 	<li>
 		<a href="<?php bloginfo('url'); ?>/about/gallery/">Gallery</a>

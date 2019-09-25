@@ -94,6 +94,7 @@ array_sort_by_column($second, 'name');
 	<!-- <h2 class="filter-title">Filter By Activity Type:</h2> -->
 
 	<!-- <div class="button-group group2 filters-button-group" data-filter-group="type"> -->
+	<div class="types">
 	<select id="filter_by_activity" class="option-set clearfix"  data-filter-group="type" onchange="getComboA(this)">
 			<!-- <button class="filbutton button showall is-checked" data-filter="*">show all</button> -->
 			<option value="*" data-filter-value="" class="selected">All</option>
@@ -112,6 +113,26 @@ array_sort_by_column($second, 'name');
 <option value=".<?php echo $filterString; ?>" data-filter-value=".<?php echo $filterString; ?>"><?php echo $bName; ?></option>		<?php }
 		?>
 		</select>
+		</div>
+
+		<div class="days">
+		<!-- <select id="filter_by_day" class="option-set clearfix"  data-filter-group="type" onchange="getComboA(this)">
+			<option value="*" data-filter-value="" class="selected">All Days</option>
+			<option value=".friday" data-filter-value="friday" class="selected">Friday</option>
+			<option value=".saturday" data-filter-value="saturday" class="selected">Saturday</option>
+			<option value=".sunday" data-filter-value="sunday" class="selected">Sunday</option>
+		</select> -->
+			<div class="select">
+				<div class="select-styled dayz">All Days</div>
+				<ul class="select-options ">
+					<li rel=".alldays">All</li>
+					<li rel=".friday">Friday</li>
+					<li rel=".saturday">Saturday</li>
+					<li rel=".sunday">Sunday</li>
+				</ul>
+			</div>
+	
+		</div>
 	<!-- </div> -->
 </div>
 <!-- SELECT -->

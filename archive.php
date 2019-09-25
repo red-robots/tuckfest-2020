@@ -61,17 +61,9 @@ $comingSoonImage = get_field('coming_soon', 'option');
 
 			<?php
 			/* Start the Loop */
-			while ( have_posts() ) : the_post(); $i++;
+			while ( have_posts() ) : the_post();
 
-				$hash = sanitize_title_with_dashes(get_the_title());
-				$eventComingSoon=get_field('coming_soon');
-				// $eventComingSoon=$eventComingSoon[0];
-				if($i==2) {
-					$class='rightz';
-					$i=0;
-				} else {
-					$class='leftz';
-				}
+				
 
 				// echo '<pre>';
 				// print_r($eventComingSoon);
@@ -80,37 +72,7 @@ $comingSoonImage = get_field('coming_soon', 'option');
 				if( $eventComingSoon != 'soon' ) :
 			?>
 
-				<article id="<?php echo $hash; ?>" class="basic <?php echo $class; ?>">
-					<div class="featured-image-mobile js-tileinfo">
-						<header class="">
-							<?php the_title( '<h2 class="mobile-title">', '</h2>' ); ?>
-						</header><!-- .entry-header -->
-						<?php 
-						if(has_post_thumbnail()) {
-							the_post_thumbnail('tile');
-						} else { ?>
-							<img src="<?php echo $comingSoonImage['url']; ?>">
-						<?php } ?>
-					</div>
-					<div class="copy">
-						<header class="entry-header">
-							<?php the_title( '<h1 class="">', '</h1>' ); ?>
-						</header><!-- .entry-header -->
-						<div class="art-close js-closecopy"><i class="fal fa-times  fa-2x"></i></div>
-						<div class="entry-content">
-							<?php the_content(); ?>
-						</div><!-- .entry-content -->
-						<!-- <div class="offset-border"></div> -->
-						<div class="featured-image">
-							<?php 
-							if(has_post_thumbnail()) {
-								the_post_thumbnail('tile');
-							} else { ?>
-								<img src="<?php echo $comingSoonImage['url']; ?>">
-							<?php } ?>
-						</div>
-					</div>
-				</article><!-- #post-## -->
+				<?php include( locate_template('inc/article.php', false, false)); ?>
 
 			<?php 
 			endif; // coming soon

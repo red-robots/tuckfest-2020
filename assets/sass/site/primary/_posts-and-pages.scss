@@ -237,6 +237,11 @@ section.schedule-music {
 		}
 	}
 	select {display: none;}
+	.days .select-styled {
+		@media screen and (min-width: $tabwidth) {
+			display: none;
+		}
+	}
 	.select-hidden {
 	  display: none;
 	  visibility: hidden;

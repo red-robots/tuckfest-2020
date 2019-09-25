@@ -13,23 +13,27 @@ jQuery.noConflict();
 
 jQuery(document).ready(function ($) {
 
-    $( window ).scroll(function() {
-      $( ".mobile-header-scroll" ).addClass( "scrolled");
-      $( "#masthead" ).addClass( "scrolled");
-    });
+    // $( window ).scroll(function() {
+    //   $( ".mobile-header-scroll" ).addClass( "scrolled");
+    //   $( "#masthead" ).addClass( "scrolled");
+    // });
 
 
-// get height of header 
-var $height = $('.site-header').height();
-$('#content').css('margin-top', $height);
+
 
 
 /*
 
-    bump content down when nav is fixed
+    bump content down when nav is fixed by calculating height
 
 
 */
+// get height of header 
+var $height = $('.site-header').height();
+$('#content').css('margin-top', $height);
+
+// Adjust slightly if no subnav
+
 var myElem = document.getElementById('js-tsn');
 if (myElem === null) {
     $('.site-content').addClass('no-subnav');
@@ -95,7 +99,12 @@ $('.main-navigation li.music').on('click', function() {
     $('ul.music').addClass('active');
     $(this).addClass('active');
 });
+/*
 
+    Expanded Info Boxes
+
+
+*/
 $('.js-tileinfo').on('click', function() {
     $(this).find('.mobile-title').addClass('active');
     $(this).next('.copy').addClass('active');
@@ -104,7 +113,12 @@ $('.js-closecopy').on('click', function() {
     $(this).parent().removeClass('active');
      $(this).parent().prev('.js-tileinfo').find('.mobile-title').removeClass('active');
 });
-// footer
+/*
+
+    Footer Graphic attaches to footer on scroll
+
+
+*/
 $(document).scroll(function() {
     
     if($('.bottom-graphic').offset().top + $('.bottom-graphic').height() >= $('.site-footer').offset().top - 10) {
@@ -115,12 +129,12 @@ $(document).scroll(function() {
         $('.bottom-graphic').css('position', 'fixed'); // restore when you scroll up
     }
 });
-            
+/*
 
-// Artists page
+    Artists Page
 
 
-
+*/
 function placeAfter($block) {
     $block.after($('#dude'));
 }
@@ -135,15 +149,24 @@ $(window).on('resize', function() {
     }
 });
 
-// supposed to be open when you visit an anchor
 
+/*
+
+    Artists Page:
+    supposed to be open when you visit an anchor
+
+
+*/
 window.onload = function() {
 var hash = window.location.hash; // would be "#div1" or something
 if(hash != "") {
     // alert(this);
     var id = hash.substr(1); // get rid of #
+    
+    //$(this).addClass('active');
     // document.getElementById(id).style.display = 'block';
     var artist = document.getElementById(id);
+    $(artist).find('.copy').addClass('active');
     // alert(artist);
     var $html = $(artist).find('.showlater').html();
     $('#dude').css('display','inline-block');
@@ -283,7 +306,26 @@ $('#filters select').each(function(){
   
     var $listItems = $list.children('li');
   
+    // $styledSelect.click(function(e) {
+    //     alert($styledSelect);
+    //     e.stopPropagation();
+    //     $('div.select-styled.active').not(this).each(function(){
+    //         $(this).removeClass('active').next('ul.select-options').hide();
+    //     });
+    //     $(this).toggleClass('active').next('ul.select-options').toggle();
+    // });
+    // console.log('$styledSelect');
     $styledSelect.click(function(e) {
+        //alert($styledSelect);
+        e.stopPropagation();
+        $('div.select-styled.active').not(this).each(function(){
+            $(this).removeClass('active').next('ul.select-options').hide();
+        });
+        $(this).toggleClass('active').next('ul.select-options').toggle();
+    });
+
+    $('.days .select .select-styled').click(function(e) {
+        // alert($styledSelect);
         e.stopPropagation();
         $('div.select-styled.active').not(this).each(function(){
             $(this).removeClass('active').next('ul.select-options').hide();
@@ -291,16 +333,40 @@ $('#filters select').each(function(){
         $(this).toggleClass('active').next('ul.select-options').toggle();
     });
   
-    $listItems.click(function(e) {
+    // $listItems.click(function(e) {
+    //     e.stopPropagation();
+    //     $styledSelect.text($(this).text()).removeClass('active');
+    //     $this.val($(this).attr('rel'));
+    //     $list.hide();
+    //     //console.log($this.val());
+    //     alert($this.val());
+    //     $( ".sched-act" ).css( "display", "none" );
+    //     var val = $(this).val();
+    //     $($this.val()).css('display', 'block');
+    // });
+    $('.types .select .select-options li').click(function(e) {
         e.stopPropagation();
         $styledSelect.text($(this).text()).removeClass('active');
         $this.val($(this).attr('rel'));
         $list.hide();
         //console.log($this.val());
-        //alert($this.val());
+        // alert($this.val());
         $( ".sched-act" ).css( "display", "none" );
         var val = $(this).val();
         $($this.val()).css('display', 'block');
+    });
+    $('.days .select .select-options li').click(function(e) {
+        e.stopPropagation();
+        $('.select-styled .dayz').text($(this).text()).removeClass('active');
+        // $this.val($(this).attr('rel'));
+        $('.days .select-options').hide();
+        //console.log($this.val());
+        // alert($this.val());
+        var rel = $(this).attr('rel');
+        $( ".js-day" ).css( "display", "none" );
+        // var val = $(this).val();
+        //alert(rel);
+        $(rel).css('display', 'block');
     });
   
     $(document).click(function() {
@@ -311,6 +377,31 @@ $('#filters select').each(function(){
 });
 
 
+    // $('.days .select .select-styled').click(function(e) {
+    //     e.stopPropagation();
+    //     $('div.select-styled.active').not(this).each(function(){
+    //         $(this).removeClass('active').next('ul.select-options').hide();
+    //     });
+    //     $(this).toggleClass('active').next('ul.select-options').toggle();
+    // });
+  
+    //  $('.days .select ul.select-options').click(function(e) {
+    //     e.stopPropagation();
+    //     $styledSelect.text($(this).text()).removeClass('active');
+    //     $this.val($(this).attr('rel'));
+    //     $list.hide();
+    //     console.log($this.val());
+    //     //alert($this.val());
+    //     $('.js-day').css( "display", "none" );
+
+    //     var val = $(this).val();
+    //     $($this.val()).css('display', 'block');
+    // });
+  
+    // $(document).click(function() {
+    //     $('div.select-styled.active').removeClass('active');
+    //     $('.days .select ul.select-options').hide();
+    // });
 
   
     $('.drops .select .select-styled').click(function(e) {
@@ -329,6 +420,7 @@ $('#filters select').each(function(){
         //console.log($this.val());
         //alert($this.val());
         $( ".sched-act" ).css( "display", "none" );
+
         var val = $(this).val();
         $($this.val()).css('display', 'block');
     });
@@ -357,7 +449,11 @@ $('.question').click(function() {
     $(this).parent().toggleClass('active');
  
 });
-
+/*
+    *
+    *   Mobile Nav
+    *
+    ------------------------------------*/
 $('.burger, .overlay').click(function(){
   $('.burger').toggleClass('clicked');
   $('.overlay').toggleClass('show');

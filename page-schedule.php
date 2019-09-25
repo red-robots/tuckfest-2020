@@ -30,7 +30,7 @@ if($comingSoon[0] !== 'soon') :
 <div class="wrapper">
 <div id="grido" class="schedule">
 	
-	<div class="col">
+	<div class="col js-day friday alldays" id="friday">
 		<h2>Friday</h2>
 		<div class="col-wrap">
 			<!-- <div class="offset"></div> -->
@@ -65,7 +65,7 @@ if($comingSoon[0] !== 'soon') :
 		</div>
 		</div>
 	</div>
-	<div class="col">
+	<div class="col js-day saturday alldays" id="saturday">
 		<h2>Saturday</h2>
 		<div class="col-wrap">
 			<!-- <div class="offset"></div> -->
@@ -100,7 +100,7 @@ if($comingSoon[0] !== 'soon') :
 		</div>
 		</div>
 	</div>
-	<div class="col">
+	<div class="col js-day sunday alldays" id="sunday">
 		<h2>Sunday</h2>
 		<div class="col-wrap">
 			<!-- <div class="offset"></div> -->
