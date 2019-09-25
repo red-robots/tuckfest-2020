@@ -70,6 +70,11 @@ if($comingSoon[0] !== 'soon') :
 							<?php the_content(); ?>
 						</div>
 					</div>
+
+					<!-- <div class="showfull">
+						<span class="a-title"><?php the_title(); ?></span>
+						<?php the_content(); ?>
+					</div> -->
 					
 				<?php endwhile; ?>
 				<!-- 

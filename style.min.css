@@ -2198,6 +2198,8 @@ section.artists .desc,section.artists .showlater,section.home-tiles .desc,sectio
 @media screen and (min-width:750px){section.artists .desc,section.artists .showlater,section.home-tiles .desc,section.home-tiles .showlater{margin:0;padding:20px}
 }section.artists .showlater,section.home-tiles .showlater{display:none}
 section.artists .showlater.active,section.home-tiles .showlater.active{display:block;max-height:1000px;width:300%;margin-left:-100%}
+section.artists .showfull,section.home-tiles .showfull{max-height:0;overflow:hidden;width:100%;display:none}
+section.artists .showfull.active,section.home-tiles .showfull.active{max-height:1500px;display:block}
 .art-close{color:#6abea3}
 svg,i{font-size:40px}
 .art-contents{font-size:20px;font-weight:200}

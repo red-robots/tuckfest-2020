@@ -787,6 +787,16 @@ section.artists, section.home-tiles {
 			margin-left: -100%;
 		}
 	}
+	.showfull {
+		max-height: 0;
+		overflow: hidden;
+		width: 100%;
+		display: none;
+		&.active {
+			max-height: 1500px;
+			display: block;
+		}
+	}
 }
 .art-close {
 	color: $color-sea-green;

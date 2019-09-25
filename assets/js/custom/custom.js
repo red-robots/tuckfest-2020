@@ -160,15 +160,15 @@ $(window).on('resize', function() {
 window.onload = function() {
 var hash = window.location.hash; // would be "#div1" or something
 if(hash != "") {
-    // alert(this);
+    // $( ".art-contents" ).empty();
     var id = hash.substr(1); // get rid of #
-    
     //$(this).addClass('active');
     // document.getElementById(id).style.display = 'block';
     var artist = document.getElementById(id);
     $(artist).find('.copy').addClass('active');
     // alert(artist);
     var $html = $(artist).find('.showlater').html();
+    $('.art-contents').append($html);
     $('#dude').css('display','inline-block');
     $('#dude').css('max-height','1000px');
     var top = $(artist).offset().top;
@@ -193,16 +193,17 @@ if(hash != "") {
             return false;
         }
     });
-    $( ".art-contents" ).empty();
+    
     $('h2.artist-title').removeClass('active');
     $(this).find('.artist-title').addClass('active');
-    $('.art-contents').append($html);
+    
 
 }};
-
 $('.wrapblock').on('click', function() {
-    // alert(this);
+    $( ".art-contents" ).empty();
+    $(this).next('.showfull').addClass('active');
     var $html = $(this).find('.showlater').html();
+    $('.art-contents').append($html);
     $chosen = $(this);
     $('#dude').css('display','inline-block');
     $('#dude').css('max-height','1500px');
@@ -226,10 +227,12 @@ $('.wrapblock').on('click', function() {
         }
     });
     // Need to take the artists info and empty it first, then add it to the new div.
-    $( ".art-contents" ).empty();
+    
     $('h2.artist-title').removeClass('active');
     $(this).find('.artist-title').addClass('active');
-    $('.art-contents').append($html);
+    $('.art-contents').addClass('active');
+    
+    console.log($html);
 });
 
 // close the div another way
