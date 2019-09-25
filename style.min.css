@@ -2045,7 +2045,8 @@ article .copy.active{max-height:1000px;padding:60px 10% 10% 10%;-webkit-transiti
 }article .copy h1{display:block;text-align:left;font-size:14pt;letter-spacing:.20em;text-transform:uppercase;color:#f4a74e}
 @media screen and (min-width:750px){article .copy h1{display:block}
 }@media screen and (min-width:750px){article .copy .art-close{display:none}
-}.eyeglass{width:33px;height:30px;position:absolute;top:12px;right:5%}
+}article .copy p{max-width:100%;display:block;float:left}
+.eyeglass{width:33px;height:30px;position:absolute;top:12px;right:5%}
 @media screen and (min-width:750px){.eyeglass{display:none}
 }.search-submit{display:none}
 input.search-field{width:100%;padding:20px 0}

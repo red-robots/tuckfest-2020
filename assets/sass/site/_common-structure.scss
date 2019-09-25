@@ -690,6 +690,11 @@ article {
 				display: none;
 			}
 		}
+		p {
+			max-width: 100%;
+			display: block;
+			float: left;
+		}
 		
 	}
 
