@@ -10,7 +10,7 @@ if($i==2) {
 }
  ?>
 <article id="<?php echo $hash; ?>" class="basic <?php echo $class; ?>">
-	<span id=""></span>
+	<span id="push"></span>
 	<div class="featured-image-mobile js-tileinfo">
 		<header class="">
 			<?php the_title( '<h2 class="mobile-title">', '</h2>' ); ?>

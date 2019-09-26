@@ -2014,16 +2014,19 @@ header.special-title .waves,.left .waves,.lefty .waves{width:25px;position:absol
 .page{width:100%;clear:both}
 article{width:100%;padding:20px 0;position:relative;float:left;margin:0}
 @media screen and (min-width:750px){article{padding:40px 0;margin:0 0 60px 0}
-}article span{margin-top:-90px;padding-bottom:90px;display:block}
-@media screen and (min-width:750px){article span{margin-top:-180px;padding-bottom:180px}
-}article.leftz{float:left}
+}article::before{display:block;content:" ";margin-top:-125px;height:125px;visibility:hidden;pointer-events:none}
+article.leftz{float:left}
 article.leftz .featured-image{top:-20px;right:-20px}
 @media screen and (min-width:1200px){article.leftz .featured-image{top:-30px;right:-100px}
 }@media screen and (min-width:750px){article.leftz .copy{float:left;padding:40px 20% 40px 10.5%}
+}article.leftz .copy.active{max-height:1000px;padding:60px 10% 10% 10%;-webkit-transition:max-height ease .3s;transition:max-height ease .3s}
+@media screen and (min-width:750px){article.leftz .copy.active{padding:40px 20% 40px 10.5%}
 }article.rightz{float:right}
 article.rightz .featured-image{top:-20px;left:-20px}
 @media screen and (min-width:1200px){article.rightz .featured-image{top:-30px;left:-100px}
 }@media screen and (min-width:750px){article.rightz .copy{float:right;padding:40px 10.5% 40px 20%}
+}article.rightz .copy.active{max-height:1000px;padding:60px 10% 10% 10%;-webkit-transition:max-height ease .3s;transition:max-height ease .3s}
+@media screen and (min-width:750px){article.rightz .copy.active{padding:40px 10.5% 40px 20%}
 }article .featured-image-mobile{width:80%;margin:0 auto;position:relative;z-index:2}
 @media screen and (min-width:750px){article .featured-image-mobile{display:none}
 }article .featured-image-mobile img{width:100%}
@@ -2038,7 +2041,6 @@ article .featured-image img{width:100%}
 article .entry-header h1{font-size:1em}
 @media screen and (min-width:750px){article .entry-header h1{font-size:1.5em}
 }article .copy{width:100%;position:relative;background-color:#fff;margin:-50px auto 30px 0;color:#092745;font-family:"Helvetica",sans-serif;font-weight:200;max-height:0;-webkit-transition:max-height ease .3s;transition:max-height ease .3s;overflow:hidden;z-index:1}
-article .copy.active{max-height:1000px;padding:60px 10% 10% 10%;-webkit-transition:max-height ease .3s;transition:max-height ease .3s}
 @media screen and (min-width:750px){article .copy{width:82%;margin:0;max-height:1000px;overflow:visible}
 }article .copy header.entry-header{display:none}
 @media screen and (min-width:750px){article .copy header.entry-header{display:block}

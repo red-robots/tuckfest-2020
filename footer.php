@@ -60,6 +60,8 @@ if( $hpID == '1876' ) {
 		$img = '-tiger.png';
 	} elseif( in_array($post_id , $yogaPageArray) ) {
 		$img = '-yoga.png';
+	} else {
+		$img = '-mountains.png';
 	}
 }
 /* Pages not to show

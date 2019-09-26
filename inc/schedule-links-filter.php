@@ -346,35 +346,37 @@ foreach($day_option as $day_name => $val ) {
 					$taxSlug = 'event-day';
 					$tax = 'event_day';
 					$type = 'Music';
-				} elseif( $postType == 'competition') {
-					$taxSlug = 'competition-type';
-					$tax = 'competition_type';
-					$type = '';
-				} elseif( $postType == 'demo_clinic') {
-					$taxSlug = 'demo-clinic-type';
-					$tax = 'demo_clinic_type';
-					$type = '';
-				} elseif( $postType == 'yoga') {
-					$taxSlug = 'yoga-day';
-					$tax = 'yoga_day';
-					$type = 'Yoga';
+			} elseif( $postType == 'competition') {
+				$taxSlug = 'competition-type';
+				$tax = 'competition_type';
+				$type = '';
+			} elseif( $postType == 'demo_clinic') {
+				$taxSlug = 'demo-clinic-type';
+				$tax = 'demo_clinic_type';
+				$type = '';
+			} elseif( $postType == 'yoga') {
+				$taxSlug = 'yoga-day';
+				$tax = 'yoga_day';
+				$type = 'Yoga';
+			}
+			if( $tax != '' ) {
+				$terms = get_the_terms($post_id, $tax );
+				if($terms){
+					$term = $terms[0]->slug;
 				}
-				if( $tax != '' ) {
-					$terms = get_the_terms($post_id, $tax );
-					if($terms){
-						$term = $terms[0]->slug;
-					}
-					// set the name
-					if($type == '') {
-						if($terms){$type = $terms[0]->name;}
-					}
-					$hash = sanitize_title_with_dashes( get_the_title($post_id) );
+				// set the name
+				if($type == '') {
+					if($terms){$type = $terms[0]->name;}
 				}
+				$hash = sanitize_title_with_dashes( get_the_title($post_id) );
+			}
 
 
 				if( $postType == 'music' ) {
 					$page = $day_option[$day]['music'];
 					$url = get_bloginfo('url').'/tuckfest-music/'.$page.'/#'.$hash;
+				} elseif( $postType == 'demo_clinic' ) {
+					$url = get_bloginfo('url').'/clinics/#'.$hash;
 				} else {
 					$url = get_bloginfo('url').'/'.$taxSlug.'/'.$term.'/#'.$hash;
 				} 

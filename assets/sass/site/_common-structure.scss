@@ -519,18 +519,26 @@ article {
 	@media screen and (min-width: $deskwidth) {
 
 	}
-	span {
-		margin-top: -90px;        /* Size of fixed header */
-		padding-bottom: 90px; 
+	&::before {
 		display: block; 
-		@media screen and (min-width: $tabwidth) {
-			margin-top: -180px;        /* Size of fixed header */
-			padding-bottom: 180px; 
-		}
-		@media screen and (min-width: $deskwidth) {
-
-		}
+		content: " "; 
+		margin-top: -125px; 
+		height: 125px; 
+		visibility: hidden; 
+		pointer-events: none;
 	}
+	// span#push {
+	// 	margin-top: -90px;        /* Size of fixed header */
+	// 	padding-bottom: 90px; 
+	// 	display: block; 
+	// 	@media screen and (min-width: $tabwidth) {
+	// 		margin-top: -280px;        /* Size of fixed header */
+	// 		padding-bottom: 280px; 
+	// 	}
+	// 	@media screen and (min-width: $deskwidth) {
+
+	// 	}
+	// }
 	&.leftz {
 		float: left;
 		.featured-image {
@@ -545,6 +553,14 @@ article {
 			@media screen and (min-width: $tabwidth) {
 				float: left;
 				padding: 40px 20% 40px 10.5%;
+			}
+			&.active {
+				max-height: 1000px;
+				padding:  60px 10% 10% 10%;
+				@include transition(max-height ease .3s);
+				@media screen and (min-width: $tabwidth) {
+					    padding: 40px 20% 40px 10.5%;
+				}
 			}
 		}
 	}
@@ -562,6 +578,14 @@ article {
 			@media screen and (min-width: $tabwidth) {
 				float: right;
 				padding: 40px 10.5% 40px 20%;
+			}
+			&.active {
+				max-height: 1000px;
+				padding:  60px 10% 10% 10%;
+				@include transition(max-height ease .3s);
+				@media screen and (min-width: $tabwidth) {
+					    padding: 40px 10.5% 40px 20%;
+				}
 			}
 		}
 	}
@@ -654,11 +678,7 @@ article {
 		@include transition(max-height ease .3s);
 		overflow: hidden;
 		z-index: 1;
-		&.active {
-			max-height: 1000px;
-			padding:  60px 10% 10% 10%;
-			@include transition(max-height ease .3s);
-		}
+		
 		@media screen and (min-width: $tabwidth) {
 			width: 82%;
 			margin: 0;

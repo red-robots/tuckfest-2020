@@ -149,9 +149,11 @@ if( $postType == 'music' ) {
 	//}
 	// Chnage for
 	$page = '2020-artists';
-	echo 'mussiiic';
+	// echo 'mussiiic';
 
 	$url = get_bloginfo('url').'/tuckfest-music/2020-artists/#'.$hash;
+} elseif ( $postType == 'demo_clinic' ) {
+	$url = get_bloginfo('url').'/clinics/#'.$hash;
 } else {
 	
 	$url = get_bloginfo('url').'/'.$taxSlug.'/'.$term.'/#'.$hash;
