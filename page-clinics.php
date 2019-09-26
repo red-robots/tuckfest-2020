@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Types Yoga
+ * Template Name: Clinics
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
@@ -41,16 +41,16 @@ if($comingSoon[0] !== 'soon') :
 			$i=0;
 			$wp_query = new WP_Query();
 			$wp_query->query(array(
-				'post_type'=>'yoga',
+				'post_type'=>'demo_clinic',
 				'posts_per_page' => -1,
 				'paged' => $paged,
-				'tax_query' => array(
-					array(
-						'taxonomy' => 'yoga_day', // your custom taxonomy
-						'field' => 'slug',
-						'terms' => array( 'friday', 'saturday', 'sunday' ) // the terms (categories) you created
-					)
-				)
+				// 'tax_query' => array(
+				// 	array(
+				// 		'taxonomy' => 'yoga_day', // your custom taxonomy
+				// 		'field' => 'slug',
+				// 		'terms' => array( 'friday', 'saturday', 'sunday' ) // the terms (categories) you created
+				// 	)
+				// )
 			));
 			if ($wp_query->have_posts()) : ?>
 			<?php while ($wp_query->have_posts()) : ?>

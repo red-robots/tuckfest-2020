@@ -16,7 +16,7 @@
 				<li class="yoga ">
 					<a href="<?php bloginfo('url'); ?>/tuckfest-yoga">Yoga</a>
 				</li>
-				<li class="clinics dimmer">
+				<li class="clinics ">
 					<a href="<?php bloginfo('url'); ?>/demo-clinic-type/clinics/">Clinics</a>
 				</li>
 				<li class="competitions dimmer">Competitions</li>
@@ -108,9 +108,9 @@
 		<a href="<?php bloginfo('url'); ?>/tuckfest-music/2020-artists">2020 Artists</a>
 	</li>
 	<li>
-		<a href="<?php bloginfo('url'); ?>/tuckfest-music/line-up-poster/">Line Up Poster</a>
+		<a href="<?php bloginfo('url'); ?>/tuckfest-music/lineup-poster/">Lineup Poster</a>
 	</li>
-	<li>
+	<!-- <li>
 		<a href="<?php bloginfo('url'); ?>/tuckfest-music/set-times/">Set Times</a>
-	</li>
+	</li> -->
 </ul>

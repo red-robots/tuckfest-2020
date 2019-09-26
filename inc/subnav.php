@@ -13,7 +13,8 @@ if( is_page() ) :
 	// Get Child pages
 	$pageArgs = array(
 		'child_of' => $ID,
-		'title_li' => ''
+		'title_li' => '',
+		'exclude'  => ''
 	);
 
 	 if( $post->post_parent )  { ?>
