@@ -17,7 +17,7 @@
 					<a href="<?php bloginfo('url'); ?>/tuckfest-yoga">Yoga</a>
 				</li>
 				<li class="clinics ">
-					<a href="<?php bloginfo('url'); ?>/demo-clinic-type/clinics/">Clinics</a>
+					<a href="<?php bloginfo('url'); ?>/clinics/">Clinics</a>
 				</li>
 				<li class="competitions dimmer">Competitions</li>
 				<li class="music dimmer tuckfest-music">Music</li>
