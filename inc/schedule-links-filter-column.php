@@ -97,7 +97,7 @@ array_sort_by_column($second, 'name');
 	<div class="types">
 	<select id="filter_by_activity" class="option-set clearfix"  data-filter-group="type" onchange="getComboA(this)">
 			<!-- <button class="filbutton button showall is-checked" data-filter="*">show all</button> -->
-			<option value="*" data-filter-value="" class="selected">All</option>
+			<option value=".sched-act" data-filter-value="" class="selected">All</option>
 		<?php 
 		
 			foreach ($second as $button) { 

@@ -9,8 +9,8 @@
 
 get_header(); 
 
-$comingSoon = get_field('coming_soon', 'option');
-
+$comingSoon = get_field('coming_soon_Athletes', 'option');
+//echo $comingSoon[0];
 ?>
 <div class="content-wrapper">
 	<div id="primary" class="content-area-full">
@@ -53,7 +53,7 @@ $comingSoon = get_field('coming_soon', 'option');
 		<?php endif; ?>
 
 
-
+<?php if($comingSoon[0] !== 'yes') : ?>
 <section class="divider">
 	<h2>ATHLETES</h2>
 </section>
@@ -168,7 +168,7 @@ $comingSoon = get_field('coming_soon', 'option');
 			</article><!-- #post-## -->
 
 
-	<?php endwhile; endif; ?>
+	<?php endwhile; endif; endif;?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

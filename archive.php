@@ -36,9 +36,7 @@ $comingSoonImage = get_field('coming_soon', 'option');
 		</div>
 		<?php } 
 
-		// echo '<pre>';
-		// print_r($obj);
-		// echo '</pre>';
+		
 
 		$i=0;
 		if ( have_posts() ) : ?>
@@ -46,6 +44,9 @@ $comingSoonImage = get_field('coming_soon', 'option');
 		<div id="banner">
 		<?php 
 			$banner = get_field('featured_image', $obj);
+			// echo '<pre>';
+			// print_r($banner);
+			// echo '</pre>';
 			if($banner) { ?>
 				<img src="<?php echo $banner['url']; ?>">
 			<?php } ?>
