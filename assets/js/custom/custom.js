@@ -122,11 +122,13 @@ $('.js-closecopy').on('click', function() {
 $(document).scroll(function() {
     
     if($('.bottom-graphic').offset().top + $('.bottom-graphic').height() >= $('.site-footer').offset().top - 10) {
-        $('.bottom-graphic').css('position', 'absolute');
+        //$('.bottom-graphic').css('position', 'absolute');
+        $('.bottom-graphic').addClass('hitit');
     }
 
     if($(document).scrollTop() + window.innerHeight < $('.site-footer').offset().top) {
-        $('.bottom-graphic').css('position', 'fixed'); // restore when you scroll up
+        //$('.bottom-graphic').css('position', 'fixed'); // restore when you scroll up
+        $('.bottom-graphic').removeClass('hitit'); // restore when you scroll up
     }
 });
 /*

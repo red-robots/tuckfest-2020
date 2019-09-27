@@ -110,6 +110,9 @@
 	<li>
 		<a href="<?php bloginfo('url'); ?>/tuckfest-music/lineup-poster/">Lineup Poster</a>
 	</li>
+	<li>
+		<a href="<?php bloginfo('url'); ?>/tuckfest-music/past-line-ups/">Past Line-ups</a>
+	</li>
 	<!-- <li>
 		<a href="<?php bloginfo('url'); ?>/tuckfest-music/set-times/">Set Times</a>
 	</li> -->

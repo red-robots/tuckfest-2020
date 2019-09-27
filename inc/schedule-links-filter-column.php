@@ -123,7 +123,7 @@ array_sort_by_column($second, 'name');
 			<option value=".sunday" data-filter-value="sunday" class="selected">Sunday</option>
 		</select> -->
 			<div class="select">
-				<div class="select-styled dayz">All Days</div>
+				<div class="select-styled dayz">Days</div>
 				<ul class="select-options ">
 					<li rel=".alldays">All</li>
 					<li rel=".friday">Friday</li>
