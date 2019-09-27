@@ -122,7 +122,12 @@ body {
 	&.parent-pageid-21,
 	&.page-id-52
 	{
-		.bottom-graphic {width: 35%;}
+		width: 50%;
+		.bottom-graphic {
+			@media screen and (min-width: $tabwidth) {
+				width: 35%;
+			}
+		}
 	}
 	&.page-template-page-artists,
 	&.tax-competition_type
