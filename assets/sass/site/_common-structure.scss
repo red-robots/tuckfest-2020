@@ -122,8 +122,9 @@ body {
 	&.parent-pageid-21,
 	&.page-id-52
 	{
-		width: 50%;
+
 		.bottom-graphic {
+			width: 50%;
 			@media screen and (min-width: $tabwidth) {
 				width: 35%;
 			}
