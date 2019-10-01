@@ -77,18 +77,20 @@
 	</li>
 </ul>
 <ul class="submenu about">
-    		
-	<li>
-		<a href="<?php bloginfo('url'); ?>/about/faqs/">FAQ's</a>
+    <li>
+		<a href="<?php bloginfo('url'); ?>/about/about-tuck-fest/">About Tuck Fest</a>
 	</li>
 	<li>
 		<a href="<?php bloginfo('url'); ?>/about/tuck-fest-insiders-guide/">Tuck Fest Insider’s Guide</a>
 	</li>
 	<li>
-		<a href="<?php bloginfo('url'); ?>/about/about-tuck-fest/">About Tuck Fest</a>
+		<a href="<?php bloginfo('url'); ?>/about/gallery/">Gallery</a>
 	</li>
 	<li>
-		<a href="<?php bloginfo('url'); ?>/about/gallery/">Gallery</a>
+		<a href="<?php bloginfo('url'); ?>/about/map/">Map</a>
+	</li>
+	<li>
+		<a href="<?php bloginfo('url'); ?>/about/accommodations/">Accommodations</a>
 	</li>
 	<li>
 		<a href="<?php bloginfo('url'); ?>/about/vendors/">Vendors</a>
@@ -97,7 +99,7 @@
 		<a href="<?php bloginfo('url'); ?>/about/food-and-beverage/">Food & Beverage</a>
 	</li>
 	<li>
-		<a href="<?php bloginfo('url'); ?>/about/map/">Map</a>
+		<a href="<?php bloginfo('url'); ?>/about/faqs/">FAQ's</a>
 	</li>
 	<li>
 		<a href="<?php bloginfo('url'); ?>/about/contact/">Contact</a>

@@ -1924,7 +1924,7 @@ body{font-family:"Helvetica",sans-serif;background-size:100%;background-color:#f
 @media screen and (min-width:750px){.wrapper{width:100%;padding:0 10px}
 }@media screen and (min-width:1200px){.wrapper{width:80%;padding:0}
 }.wrapper.pagecontent{padding:40px 20px 0 20px;clear:both}
-@media screen and (min-width:750px){.wrapper.pagecontent{padding:40px 0 0 0}
+@media screen and (min-width:1200px){.wrapper.pagecontent{padding:40px 0 0 0}
 }.sub-wrapper{width:100%;margin:0 auto;clear:both}
 @media screen and (min-width:750px){.sub-wrapper{width:100%;padding:0 10px}
 }@media screen and (min-width:1200px){.sub-wrapper{max-width:700px;width:80%;padding:40px 0}
@@ -1937,7 +1937,7 @@ body{font-family:"Helvetica",sans-serif;background-size:100%;background-color:#f
 .bottom-graphic img{width:100%}
 .bottom-graphic.scrolled{position:absolute}
 .bottom-graphic.hitit{position:absolute}
-body.page-template-default .bottom-graphic{position:absolute}
+body.page-template-default .bottom-graphic,body.term-deep-water-solo .bottom-graphic{position:absolute}
 body.home .bottom-graphic,body.page-template-page-special-title .bottom-graphic,body.page-template-page-schedule .bottom-graphic,body.page-template-page-faq .bottom-graphic,body.page-template-page-photos .bottom-graphic,body.page-id-2625 .bottom-graphic,body.parent-pageid-27 .bottom-graphic,body.parent-pageid-21 .bottom-graphic,body.page-id-52 .bottom-graphic{width:50%}
 @media screen and (min-width:750px){body.home .bottom-graphic,body.page-template-page-special-title .bottom-graphic,body.page-template-page-schedule .bottom-graphic,body.page-template-page-faq .bottom-graphic,body.page-template-page-photos .bottom-graphic,body.page-id-2625 .bottom-graphic,body.parent-pageid-27 .bottom-graphic,body.parent-pageid-21 .bottom-graphic,body.page-id-52 .bottom-graphic{width:35%}
 }body.page-template-page-artists .bottom-graphic,body.tax-competition_type .bottom-graphic{width:66%}
