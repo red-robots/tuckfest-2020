@@ -1693,7 +1693,7 @@ ul.submenu.active{max-height:1000px;padding:130px 10% 20px 10%;-webkit-transitio
 ul.submenu li:after{background-color:#6abea3;width:0;height:2px;position:absolute;bottom:-5px;left:5px;content:'';-webkit-transition:all ease .2s;transition:all ease .2s}
 ul.submenu li.active:after,ul.submenu li:hover:after{width:50%}
 @media screen and (min-width:750px){ul.submenu li{max-height:1000px}
-}ul.submenu a{color:#6abea3;text-decoration:none;padding:5px 15px;border:0}
+}ul.submenu a{color:#6abea3;text-decoration:none;padding:5px;border:0}
 ul.submenu a:after{background-color:#6abea3;width:0;height:2px;position:absolute;bottom:-5px;left:5px;content:'';-webkit-transition:all ease .2s;transition:all ease .2s}
 ul.submenu a.active:after,ul.submenu a:hover:after{width:50%}
 .main-navigation{clear:both;display:block;text-align:center;width:100%;position:relative;z-index:1000}

@@ -143,7 +143,8 @@ ul.submenu {
       a {
         color: $color-sea-green;
         text-decoration: none;
-        padding: 5px 15px;
+        // padding: 5px 15px;
+        padding: 5px;
         border: 0;
 
         &:after {
