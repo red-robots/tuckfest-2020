@@ -2128,7 +2128,7 @@ section.schedule-music .col{-webkit-flex-basis:22%;-ms-flex-preferred-size:22%;f
 #filters .select-options.blue,.drops .select-options.blue{background-color:#061a2e}
 #filters .select-options a,.drops .select-options a{color:#f4a74e;text-decoration:none}
 #filters .select-options li,.drops .select-options li{margin:0;padding:12px 0;text-indent:15px;text-align:left;border-top:1px solid #030e18;-webkit-transition:all .15s ease-in;transition:all .15s ease-in}
-#filters .select-options li:hover,.drops .select-options li:hover{color:#f4a74e;background:#f4a74e}
+#filters .select-options li:hover,.drops .select-options li:hover{color:#fff;background:#f4a74e}
 #filters .select-options li[rel="hide"],.drops .select-options li[rel="hide"]{display:none}
 .filbutton{display:inline-block;padding:10px 18px;margin-bottom:2px;text-transform:uppercase;border:0;cursor:pointer}
 #outer-container{overflow:hidden}

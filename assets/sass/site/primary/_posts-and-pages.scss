@@ -337,7 +337,7 @@ section.schedule-music {
 	    border-top: 1px solid darken($color-blue, 10);
 	    @include transition(all 0.15s ease-in);
 	    &:hover {
-	      color: $color-orange;
+	      color: #fff;
 	      background: $color-orange;
 	    }
 	    &[rel="hide"] {
