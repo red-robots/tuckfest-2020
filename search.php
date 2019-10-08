@@ -9,9 +9,9 @@
 
 get_header(); ?>
 
-	<section id="primary" class="content-area">
+	<section id="primary" class="content-area-full">
 		<main id="main" class="site-main" role="main">
-
+			<div class="wrapper">
 		<?php
 		if ( have_posts() ) : ?>
 
@@ -39,10 +39,11 @@ get_header(); ?>
 			get_template_part( 'template-parts/content', 'none' );
 
 		endif; ?>
+		</div>
 
 		</main><!-- #main -->
 	</section><!-- #primary -->
 
 <?php
-get_sidebar();
+// get_sidebar();
 get_footer();

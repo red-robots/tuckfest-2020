@@ -17,6 +17,19 @@ body {
 			@media screen and (min-width: $tabwidth) {top: 32px;}
 		}
 	}
+	&.search {
+		article, header.page-header {
+			width: 90%;
+			margin: 20px auto;
+			float: none;
+		}
+		h2 {
+			a {
+				color: $color-orange;
+				text-decoration: none;
+			}
+		}
+	}
 }
 .clear {clear: both;}
 .wrapper {

@@ -1919,7 +1919,9 @@ html[xmlns] .flexslider .slides{display:block}
 .widget select{max-width:100%}
 body{font-family:"Helvetica",sans-serif;background-size:100%;background-color:#faf0d0}
 @media screen and (min-width:750px){body.logged-in #masthead{top:32px}
-}.clear{clear:both}
+}body.search article,body.search header.page-header{width:90%;margin:20px auto;float:none}
+body.search h2 a{color:#f4a74e;text-decoration:none}
+.clear{clear:both}
 .wrapper{width:100%;margin:0 auto;clear:both}
 @media screen and (min-width:750px){.wrapper{width:100%;padding:0 10px}
 }@media screen and (min-width:1200px){.wrapper{width:80%;padding:0}
