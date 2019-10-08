@@ -100,7 +100,7 @@
 	</li>
 	
 	<li>
-		<a href="<?php bloginfo('url'); ?>/about/faqs/">FAQ's</a>
+		<a href="<?php bloginfo('url'); ?>/about/faqs/">FAQs</a>
 	</li>
 	<li>
 		<a href="<?php bloginfo('url'); ?>/about/contact/">Contact</a>
