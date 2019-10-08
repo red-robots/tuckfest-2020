@@ -93,7 +93,7 @@
 		<a href="<?php bloginfo('url'); ?>/about/accommodations/">Accommodations</a>
 	</li>
 	<li>
-		<a href="<?php bloginfo('url'); ?>/about/food-and-beverage/">Food & Beverage</a>
+		<a href="<?php bloginfo('url'); ?>/about/food-and-beverage/">Food an Beverage</a>
 	</li>
 	<li>
 		<a href="<?php bloginfo('url'); ?>/about/vendors/">Vendors</a>
