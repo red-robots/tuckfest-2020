@@ -201,40 +201,60 @@ if(hash != "") {
     
 
 }};
-$('.wrapblock').on('click', function() {
-    $( ".art-contents" ).empty();
-    $(this).next('.showfull').addClass('active');
-    var $html = $(this).find('.showlater').html();
-    $('.art-contents').append($html);
-    $chosen = $(this);
-    $('#dude').css('display','inline-block');
-    $('#dude').css('max-height','1500px');
-    var top = $(this).offset().top;
-    var $blocks = $(this).nextAll('.wrapblock');
-    if ($blocks.length == 0) {
-        placeAfter($(this));
-        return false;
 
-    }
-    $blocks.each(function(i, j) {
-        
-        if($(this).offset().top != top) {
-            placeAfter($(this).prev('.wrapblock'));
-            // alert('!=');
-            return false;
-        } else if ((i + 1) == $blocks.length) {
+ 
+
+
+$('.wrapblock').on('click', function() {
+    
+    if( $(this).find('.artist-title').hasClass('active') ){
+
+        $(this).find('.artist-title').removeClass('active');
+        $('#dude').css('display', 'none');
+        //console.log('Closing pop up...');
+
+    } else {
+        // open pop up
+        //console.log('Opening pop up...');
+
+        $( ".art-contents" ).empty();
+        //$(this).next('.showfull').addClass('active');
+        var $html = $(this).find('.showlater').html();
+        $('.art-contents').append($html);
+        $chosen = $(this);
+        $('#dude').css('display','inline-block');
+        $('#dude').css('max-height','1500px');
+        var top = $(this).offset().top;
+        var $blocks = $(this).nextAll('.wrapblock');
+        if ($blocks.length == 0) {
             placeAfter($(this));
-            // alert('1');
             return false;
+
         }
-    });
-    // Need to take the artists info and empty it first, then add it to the new div.
+        $blocks.each(function(i, j) {
+            
+            if($(this).offset().top != top) {
+                placeAfter($(this).prev('.wrapblock'));
+                // alert('!=');
+                return false;
+            } else if ((i + 1) == $blocks.length) {
+                placeAfter($(this));
+                // alert('1');
+                return false;
+            }
+        });
+        // Need to take the artists info and empty it first, then add it to the new div.
+        
+        $('h2.artist-title').removeClass('active');
+        $(this).find('.artist-title').addClass('active');
+        $('.art-contents').addClass('active');
+
+
+    } // if( $(this).find('.artist-title').hasClass('active') )
+
     
-    $('h2.artist-title').removeClass('active');
-    $(this).find('.artist-title').addClass('active');
-    $('.art-contents').addClass('active');
     
-    console.log($html);
+    //console.log($html);
 });
 
 // close the div another way
@@ -243,6 +263,8 @@ $('.art-close').on('click', function() {
     $('h2.artist-title').removeClass('active');
 });
     // artists
+
+
     
 
     /*

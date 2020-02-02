@@ -55,7 +55,7 @@ if($comingSoon[0] !== 'soon') :
 				?>
 				
 					<div class="artists-tile wrapblock" id="<?php echo $hash; ?>">
-					<span id=""></span>
+						<span id=""></span>
 						<header class="">
 							<?php the_title( '<h2 class="artist-title">', '</h2>' ); ?>
 						</header><!-- .entry-header -->
@@ -70,11 +70,6 @@ if($comingSoon[0] !== 'soon') :
 							<?php the_content(); ?>
 						</div>
 					</div>
-
-					<!-- <div class="showfull">
-						<span class="a-title"><?php the_title(); ?></span>
-						<?php the_content(); ?>
-					</div> -->
 					
 				<?php endwhile; ?>
 				<!-- 
