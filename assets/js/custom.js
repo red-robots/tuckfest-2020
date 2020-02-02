@@ -216,6 +216,8 @@ $('.wrapblock').on('click', function() {
     } else {
         // open pop up
         //console.log('Opening pop up...');
+        $('h2.artist-title').removeClass('active');
+        $(this).find('.artist-title').addClass('active');
 
         $( ".art-contents" ).empty();
         //$(this).next('.showfull').addClass('active');
@@ -245,8 +247,7 @@ $('.wrapblock').on('click', function() {
         });
         // Need to take the artists info and empty it first, then add it to the new div.
         
-        $('h2.artist-title').removeClass('active');
-        $(this).find('.artist-title').addClass('active');
+        
         $('.art-contents').addClass('active');
 
 
