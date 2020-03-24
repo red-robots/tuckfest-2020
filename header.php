@@ -58,7 +58,38 @@ wp_head();
 
 $GLOBALS['pageID'] = get_the_ID();
 
+$alert = get_field('toggle_on', 'option');
+$alert = $alert[0];
+$alert_message = get_field('alert_message', 'option');
+$text_color = get_field('text_color', 'option');
+$background_color = get_field('background_color', 'option');
+$link_color = get_field('link_color', 'option');
+
 ?>
+<style type="text/css">
+	.alert {
+		width: 100%;
+		position: relative;
+		float: left;
+		text-align: center;
+		padding: 20px ;
+		font-size: 22px;
+	}
+	@media screen and (min-width: 650px) {
+		.alert {
+			font-size: 28px;
+		}
+	}
+	.alert {
+		color: <?php echo $text_color; ?>
+	}
+	.alert {
+		background-color: <?php echo $background_color; ?>
+	}
+	.alert a {
+		color: <?php echo $link_color; ?>
+	}
+</style>
 </head>
 
 <body <?php body_class(); ?>>
@@ -119,6 +150,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content ">
+
+		<?php 
+	/*
+		Alert message added for the Coronavirus.
+
+	*/
+	if( $alert == 'on' ) { ?>
+		<div class="alert">
+			<?php echo $alert_message; ?>
+		</div>
+	<?php } ?>
 
 	<?php 
 	$id = array();
