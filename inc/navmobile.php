@@ -13,9 +13,9 @@
     		<li>
     			<a href="<?php bloginfo('url'); ?>/tuckfest-music/2020-artists">2020 Artists</a>
     		</li>
-    		<li>
+    		<!-- <li>
     			<a href="<?php bloginfo('url'); ?>/tuckfest-music/line-up-poster/">Line-up Poster</a>
-    		</li>
+    		</li> -->
     		<li>
     			<a href="<?php bloginfo('url'); ?>/tuckfest-music/past-line-ups/">Past Line-up</a>
     		</li>
