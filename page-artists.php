@@ -38,6 +38,9 @@ if($comingSoon[0] !== 'soon') :
 			$wp_query->query(array(
 				'post_type'=> 'music',
 				'posts_per_page' => -1,
+				'orderby'   => 'menu_order',
+				'order'     => 'ASC'
+
 				// 'tax_query' => array(
 				// 	array(
 				// 		'taxonomy' => 'event_day', // your custom taxonomy
