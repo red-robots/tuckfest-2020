@@ -378,7 +378,7 @@ $('#filters select').each(function(){
         $this.val($(this).attr('rel'));
         $list.hide();
         //console.log($this.val());
-        alert($this.val());
+        // alert($this.val());
         $( ".sched-act" ).css( "display", "none" );
         var val = $(this).val();
         $($this.val()).css('display', 'block');

@@ -29,13 +29,16 @@ if( is_page('home') ) {
  *
  */ ?>
 <div id="banner">
-	<?php $flexslider = get_field( "flexslider_banner" );
+	<?php 
+	$flexslider = get_field( "flexslider_banner" );
+	$showImg = get_field('show_image');
+	$imgOverlay = get_field('image_overlay');
 	if ( $flexslider ):?>
 		<div class="flexslider">
 			<ul class="slides">
-			<?php if( is_page('home') ) { ?>
+			<?php if( is_page('home') && $showImg == 'yes' ) { ?>
 				<div class="logo-w-date">
-					<img src="<?php bloginfo('stylesheet_directory'); ?>/images/logo-w-date.png">
+					<img src="<?php echo $imgOverlay['url']; ?>">
 				</div>
 				
 			<?php } ?>
